@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.a3isummit.threeisummit">
 
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,7 +31,8 @@
             android:name=".HomescreenActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name=".CountDownActivity"></activity>
+        <activity android:name=".CountDownActivity" />
+        <activity android:name=".InviteActivity"></activity>
     </application>
 
 </manifest>

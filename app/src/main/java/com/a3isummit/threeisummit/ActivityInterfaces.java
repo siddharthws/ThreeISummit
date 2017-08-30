@@ -14,4 +14,11 @@ public class ActivityInterfaces
         void onRegistrationComplete();
         void onRegistrationFailed();
     }
+
+    // Permission Listeners
+    public interface ContactPermission
+    {
+        void onContactPermissionSuccess();
+        void onContactPermissionFailure();
+    }
 }

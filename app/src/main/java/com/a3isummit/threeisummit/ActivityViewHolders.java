@@ -3,7 +3,9 @@ package com.a3isummit.threeisummit;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.a3isummit.views.RlAbout;
@@ -49,5 +51,13 @@ public class ActivityViewHolders
         public RlCountdown rlCountdown = null;
         public RlAbout rlAbout = null;
         public RlEvent rlEvent = null;
+    }
+
+    public static class Invite extends Base
+    {
+        public RelativeLayout rlSyncProgress = null;
+        public ProgressBar pbSync = null;
+        public TextView tvSync = null;
+        public ListView lvContacts = null;
     }
 }

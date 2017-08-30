@@ -121,6 +121,12 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
                 }
                 break;
             }
+
+            case RlDrawer.DRAWER_ACTION_INVITE:
+            {
+                InviteActivity.Start(this);
+                break;
+            }
         }
     }
 }
