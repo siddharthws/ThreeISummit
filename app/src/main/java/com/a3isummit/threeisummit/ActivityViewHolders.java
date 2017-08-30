@@ -6,7 +6,10 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.a3isummit.views.RlAbout;
+import com.a3isummit.views.RlCountdown;
 import com.a3isummit.views.RlDrawer;
+import com.a3isummit.views.RlEvent;
 
 /**
  * Created by Siddharth on 28-06-2017.
@@ -41,5 +44,10 @@ public class ActivityViewHolders
 
         // Drawer Layout
         public RlDrawer rlDrawer = null;
+
+        // Contents
+        public RlCountdown rlCountdown = null;
+        public RlAbout rlAbout = null;
+        public RlEvent rlEvent = null;
     }
 }

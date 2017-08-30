@@ -8,7 +8,10 @@ import com.a3isummit.animations.AnimHelper;
 import com.a3isummit.animations.AnimObject;
 import com.a3isummit.animations.PowerInterpolator;
 import com.a3isummit.macros.MacRequestCodes;
+import com.a3isummit.views.RlAbout;
+import com.a3isummit.views.RlCountdown;
 import com.a3isummit.views.RlDrawer;
+import com.a3isummit.views.RlEvent;
 
 /**
  * Homescreen activity
@@ -34,6 +37,9 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         // Find all views form layout
         ui.ibDrawer         = (ImageButton)     ui.vwContent.findViewById(R.id.ib_toolbar_drawer);
         ui.rlDrawer         = (RlDrawer)        ui.vwContent.findViewById(R.id.rl_drawer);
+        ui.rlCountdown      = (RlCountdown)     ui.vwContent.findViewById(R.id.rl_countdown);
+        ui.rlAbout          = (RlAbout)         ui.vwContent.findViewById(R.id.rl_about);
+        ui.rlEvent          = (RlEvent)         ui.vwContent.findViewById(R.id.rl_event);
 
         // Set Holder
         holder = ui;
@@ -61,6 +67,36 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
     {
         // Open Drawer
         ui.rlDrawer.Open();
+    }
+
+    public void ButtonClickCountdown(View view)
+    {
+        // Hide other views
+        ui.rlAbout.setVisibility(View.GONE);
+        ui.rlEvent.setVisibility(View.GONE);
+
+        // Make this view viisble
+        ui.rlCountdown.setVisibility(View.VISIBLE);
+    }
+
+    public void ButtonClickAbout(View view)
+    {
+        // Hide other views
+        ui.rlCountdown.setVisibility(View.GONE);
+        ui.rlEvent.setVisibility(View.GONE);
+
+        // Make this view viisble
+        ui.rlAbout.setVisibility(View.VISIBLE);
+    }
+
+    public void ButtonClickEvent(View view)
+    {
+        // Hide other views
+        ui.rlAbout.setVisibility(View.GONE);
+        ui.rlCountdown.setVisibility(View.GONE);
+
+        // Make this view viisble
+        ui.rlEvent.setVisibility(View.VISIBLE);
     }
 
     @Override

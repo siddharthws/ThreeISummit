@@ -56,5 +56,72 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <LinearLayout
+        android:id="@+id/ll_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_shadow_up">
+
+        <ImageButton
+            android:id="@+id/ibCountdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/icon_drawer_grey"
+            android:onClick="ButtonClickCountdown"/>
+
+        <ImageButton
+            android:id="@+id/ibAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/icon_drawer_grey"
+            android:onClick="ButtonClickAbout"/>
+
+        <ImageButton
+            android:id="@+id/ibEvent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/icon_drawer_grey"
+            android:onClick="ButtonClickEvent"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_toolbar_homescreen"
+        android:layout_above="@id/ll_tabs">
+
+        <com.a3isummit.views.RlCountdown
+            android:id="@+id/rl_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.a3isummit.views.RlAbout
+            android:id="@+id/rl_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.a3isummit.views.RlEvent
+            android:id="@+id/rl_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>
