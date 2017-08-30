@@ -105,6 +105,12 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
     {
         switch (actionId)
         {
+            case RlDrawer.DRAWER_ACTION_FEEDBACK:
+            {
+                FeedbackActivity.Start(this);
+                break;
+            }
+
             case RlDrawer.DRAWER_ACTION_EXIT:
             {
                 finish();

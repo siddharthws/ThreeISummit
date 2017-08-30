@@ -31,9 +31,12 @@
             android:name=".HomescreenActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name=".CountDownActivity" />
         <activity android:name=".InviteActivity"></activity>
-        <activity android:name=".FeedbackActivity"></activity>
+        <activity
+            android:name=".FeedbackActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

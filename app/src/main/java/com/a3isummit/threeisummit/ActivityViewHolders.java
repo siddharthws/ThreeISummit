@@ -1,6 +1,8 @@
 package com.a3isummit.threeisummit;
 
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -53,11 +55,18 @@ public class ActivityViewHolders
         public RlEvent rlEvent = null;
     }
 
-    public static class Invite extends Base
-    {
+    public static class Invite extends Base {
         public RelativeLayout rlSyncProgress = null;
         public ProgressBar pbSync = null;
         public TextView tvSync = null;
         public ListView lvContacts = null;
+    }
+
+    public static class Feedback extends Base
+    {
+        public TextView fbTextview = null;
+        public EditText fbEdittext1 = null;
+        public EditText fbEdittext2 = null;
+        public Button submit = null;
     }
 }

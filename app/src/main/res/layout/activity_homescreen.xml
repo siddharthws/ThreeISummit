@@ -51,10 +51,6 @@
 
     </RelativeLayout>
 
-    <com.a3isummit.views.RlDrawer
-        android:id="@+id/rl_drawer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
     <LinearLayout
         android:id="@+id/ll_tabs"
@@ -121,9 +117,14 @@
             android:layout_height="wrap_content"
             android:visibility="gone"/>
 
+
     </RelativeLayout>
 
 
+    <com.a3isummit.views.RlDrawer
+        android:id="@+id/rl_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 </RelativeLayout>
