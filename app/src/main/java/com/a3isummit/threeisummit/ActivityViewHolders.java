@@ -6,6 +6,8 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.a3isummit.views.RlDrawer;
+
 /**
  * Created by Siddharth on 28-06-2017.
  */
@@ -34,5 +36,10 @@ public class ActivityViewHolders
 
     public static class Homescreen extends Base
     {
+        // Toolbar Buttons
+        public ImageButton ibDrawer     = null;
+
+        // Drawer Layout
+        public RlDrawer rlDrawer = null;
     }
 }
