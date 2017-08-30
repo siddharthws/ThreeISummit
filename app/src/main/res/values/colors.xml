@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- Shades of Grey -->
+    <color name="WHITE">#FFFFFF</color>
+    <color name="GREY_1">#EEEEEE</color>
+    <color name="GREY_2">#DDDDDD</color>
+    <color name="GREY_3">#CCCCCC</color>
+    <color name="GREY_4">#BBBBBB</color>
+    <color name="GREY_5">#AAAAAA</color>
+    <color name="GREY_6">#999999</color>
+    <color name="GREY_7">#888888</color>
+    <color name="GREY_8">#777777</color>
+    <color name="GREY_9">#666666</color>
+    <color name="BLACK">#000000</color>
 </resources>

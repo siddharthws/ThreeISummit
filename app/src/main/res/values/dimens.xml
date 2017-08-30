@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text Sizes -->
+    <dimen name="textsize_page_title">      40sp</dimen>
+    <dimen name="textsize_primary">         20sp</dimen>
+    <dimen name="textsize_primary_small">   16sp</dimen>
+    <dimen name="textsize_description">     14sp</dimen>
+    <dimen name="textsize_label">           10sp</dimen>
+
+    <!-- Toolbar layout -->
+    <dimen name="toolbar_height">55dp</dimen>
+    <dimen name="toolbar_floating_margin">10dp</dimen>
+    <dimen name="toolbar_padding">5dp</dimen>
+    <dimen name="toolbar_button_height_width">40dp</dimen>
+    <dimen name="toolbar_button_padding">6dp</dimen>
+</resources>
