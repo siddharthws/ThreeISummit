@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ThreeISummit</string>
+
+    <string name="activity_name_homescreen">3I Summit</string>
 </resources>

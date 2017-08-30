@@ -1,6 +1,7 @@
 package com.a3isummit.threeisummit;
 
 import android.content.Intent;
+import android.view.View;
 
 import com.a3isummit.macros.MacRequestCodes;
 
@@ -39,5 +40,15 @@ public class HomescreenActivity extends     BaseActivity
     public static void Start(BaseActivity activity)
     {
         BaseActivity.Start(activity, HomescreenActivity.class, Intent.FLAG_ACTIVITY_CLEAR_TOP, null, MacRequestCodes.INVALID, null);
+    }
+
+    // Button Click APis
+    public void ButtonClickDrawer(View view)
+    {
+    }
+
+    // Button Click APis
+    public void ButtonClickBack(View view)
+    {
     }
 }

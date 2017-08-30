@@ -6,11 +6,62 @@
     android:layout_height="match_parent"
     android:background="@color/WHITE">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Home Screen"/>
+    <RelativeLayout
+        android:id="@+id/rl_toolbar_homescreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:paddingLeft="@dimen/toolbar_padding"
+        android:paddingRight="@dimen/toolbar_padding"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_white_shadow_down">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/ib_toolbar_drawer"
+                android:layout_width="@dimen/toolbar_button_height_width"
+                android:layout_height="@dimen/toolbar_button_height_width"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/toolbar_button_padding"
+                android:src="@mipmap/icon_drawer_grey"
+                android:scaleType="fitXY"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="ButtonClickDrawer"/>
+
+            <ImageButton
+                android:id="@+id/ib_toolbar_back"
+                android:layout_width="@dimen/toolbar_button_height_width"
+                android:layout_height="@dimen/toolbar_button_height_width"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/toolbar_button_padding"
+                android:src="@mipmap/icon_back_grey"
+                android:scaleType="fitXY"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="ButtonClickBack"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_toolbar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rl_toolbar_drawer"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textsize_primary"
+            android:textColor="@color/GREY_9"
+            android:text="@string/activity_name_homescreen"/>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
