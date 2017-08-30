@@ -2,4 +2,13 @@
     <string name="app_name">ThreeISummit</string>
 
     <string name="activity_name_homescreen">3I Summit</string>
+
+    <string name="counter">Starts In...</string>
+    <string name="countleft">Till 3I Summit</string>
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="summit">11th 3I Summit</string>
+    <string name="days">Days</string>
+
 </resources>
