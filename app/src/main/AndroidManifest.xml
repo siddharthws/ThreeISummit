@@ -31,6 +31,7 @@
             android:name=".HomescreenActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
+
         <activity android:name=".InviteActivity"></activity>
         <activity
             android:name=".FeedbackActivity"
