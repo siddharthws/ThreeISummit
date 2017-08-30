@@ -1,6 +1,7 @@
 package com.a3isummit.threeisummit;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -107,6 +108,17 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
             case RlDrawer.DRAWER_ACTION_EXIT:
             {
                 finish();
+                break;
+            }
+
+            case RlDrawer.DRAWER_ACTION_LOCATE:
+            {
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=18.611845,73.748792(3I Summit)");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(mapIntent);
+                }
                 break;
             }
         }
