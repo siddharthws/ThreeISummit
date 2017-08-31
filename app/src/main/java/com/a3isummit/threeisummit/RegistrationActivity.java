@@ -1,5 +1,10 @@
 package com.a3isummit.threeisummit;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.NotificationCompat;
 import android.view.View;
 
 import com.a3isummit.macros.MacRequestCodes;
@@ -39,11 +44,12 @@ public class RegistrationActivity extends         BaseActivity
         BaseActivity.Start(activity, RegistrationActivity.class, -1, null, MacRequestCodes.CODE_ACTIVITY_RESULT_REGISTRATION, null);
     }
 
-    // Button Click APis
+
     public void ButtonClickRegister(View view)
     {
         setResult(RESULT_OK);
         finish();
+
     }
 
     // ----------------------- Private APIs ----------------------- //

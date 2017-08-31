@@ -4,8 +4,8 @@
     <string name="activity_name_homescreen">3I Summit</string>
     <string name="activity_name_feedback">Feedback</string>
 
-    <string name="counter">Wait For...</string>
-    <string name="countleft">To 3I Summit</string>
+    <string name="counter">Wait...</string>
+    <string name="countleft">For BRAND SLAM</string>
     <string name="hours">Hours</string>
     <string name="minutes">Minutes</string>
     <string name="seconds">Seconds</string>
@@ -16,6 +16,8 @@
 
 
     <string name="feedback_text">Please provide your valuable suggestions to improve the app...</string>
+
+    <string name="notifyTitle">Sample notification</string>
 
 
 </resources>

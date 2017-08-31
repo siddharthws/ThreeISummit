@@ -1,14 +1,19 @@
 package com.a3isummit.views;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.NotificationCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.a3isummit.threeisummit.HomescreenActivity;
 import com.a3isummit.threeisummit.R;
 
 import java.text.SimpleDateFormat;
@@ -80,6 +85,24 @@ public class RlCountdown extends RelativeLayout
                         txtHour.setText("" + String.format("%02d", hours));
                         txtMinute.setText("" + String.format("%02d", minutes));
                         txtSecond.setText("" + String.format("%02d", seconds));
+
+
+                        //send periodic notification
+                       // NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+                          //      .setSmallIcon(R.drawable.notify)
+                          //      .setContentTitle("Sample notification")
+                           //     .setContentText("This is a test notification")
+                           //     .setAutoCancel(true);
+
+                      //  Intent notificationIntent = new Intent(this, HomescreenActivity.class);
+                       // PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+                       //         PendingIntent.FLAG_UPDATE_CURRENT);
+                       // builder.setContentIntent(contentIntent);
+
+                     //   NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                      //  manager.notify(0, builder.build());
+
+
                     } else {
                         tvEventStart.setVisibility(View.VISIBLE);
                         tvEventStart.setText("The Event started");
