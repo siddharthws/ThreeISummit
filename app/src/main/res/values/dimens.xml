@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Text Sizes -->
-    <dimen name="textsize_page_title">      40sp</dimen>
-    <dimen name="textsize_primary">         20sp</dimen>
-    <dimen name="textsize_primary_small">   16sp</dimen>
-    <dimen name="textsize_description">     14sp</dimen>
-    <dimen name="textsize_label">           10sp</dimen>
+    <dimen name="textsize_page_title">40sp</dimen>
+    <dimen name="textsize_primary">20sp</dimen>
+    <dimen name="textsize_primary_small">16sp</dimen>
+    <dimen name="textsize_description">14sp</dimen>
+    <dimen name="textsize_label">10sp</dimen>
 
     <!-- Toolbar layout -->
     <dimen name="toolbar_height">55dp</dimen>
@@ -26,4 +26,5 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
