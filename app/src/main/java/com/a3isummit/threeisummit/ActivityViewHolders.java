@@ -71,4 +71,9 @@ public class ActivityViewHolders
         public EditText fbEdittext2 = null;
         public Button submit = null;
     }
+
+    public static class Testimonial extends Base
+    {
+        public ListView lvList = null;
+    }
 }

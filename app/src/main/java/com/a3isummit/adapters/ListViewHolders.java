@@ -28,4 +28,12 @@ public class ListViewHolders
         public View                 vwItemSep;
         public View                 vwGroupSep;
     }
+
+    // Testimonial List Items
+    public static class Testimonial
+    {
+        public TextView tvName = null;
+        public TextView tvDate = null;
+        public TextView tvText = null;
+    }
 }

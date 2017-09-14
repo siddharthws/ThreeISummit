@@ -1,5 +1,7 @@
 package com.a3isummit.adapters;
 
+import com.a3isummit.objects.TestimonialObject;
+
 /**
  * Data Objects used to store data which populates the list item view
  */
@@ -15,8 +17,7 @@ public class ListItemObject
     public static final int TYPE_DRAWER_ITEM_SEPARATOR  = 2;        // Drawer items separator
     public static final int TYPE_DRAWER_GROUP_SEPARATOR = 3;        // Drawer Group separator
 
-    // Generic items for different types of data
-    public static final int TYPE_LEAD                   = 4;        // lead list item
+    public static final int TYPE_TESTIMONIAL            = 4;        // Actual Drawer view with image and text
 
     // ----------------------- Classes ---------------------------//
     // Base Class for list Item Data
@@ -53,6 +54,20 @@ public class ListItemObject
             this.startImageId       = startImageId;
             this.endImageId         = endImageId;
             this.background         = background;
+        }
+    }
+
+    public static class Testimonial extends Base
+    {
+        // ----------------------- Globals ----------------------- //
+        public TestimonialObject testimonial = null;
+
+        // ----------------------- Constructor ----------------------- //
+        public Testimonial(TestimonialObject testimonial)
+        {
+            super(TYPE_TESTIMONIAL, -1);
+
+            this.testimonial              = testimonial;
         }
     }
 }

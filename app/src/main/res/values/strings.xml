@@ -18,6 +18,7 @@
     <string name="feedback_text">Please provide your valuable suggestions to improve the app...</string>
 
     <string name="notifyTitle">Sample notification</string>
+    <string name="activity_name_testimonial">Testimonials</string>
 
 
 </resources>
