@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.NotificationCompat;
 import android.util.AttributeSet;
+import android.util.Config;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -47,7 +48,7 @@ public class RlCountdown extends RelativeLayout
         InitView(context);
     }
 
-    private void InitView(Context context) {
+    private void InitView(final Context context) {
         // Inflate Layout
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.custom_rl_countdown, this, true);
@@ -87,25 +88,77 @@ public class RlCountdown extends RelativeLayout
                         txtSecond.setText("" + String.format("%02d", seconds));
 
 
-                        //send periodic notification
-                       // NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                          //      .setSmallIcon(R.drawable.notify)
-                          //      .setContentTitle("Sample notification")
-                           //     .setContentText("This is a test notification")
-                           //     .setAutoCancel(true);
+                       switch((int)days)
+                       {
+                           case 24:
+                                        String title="24 Days more to Go";
+                                        String text="Open The Countdown";
+                                        notifyCall(context,title,text);
+                                        break;
 
-                      //  Intent notificationIntent = new Intent(this, HomescreenActivity.class);
-                       // PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
-                       //         PendingIntent.FLAG_UPDATE_CURRENT);
-                       // builder.setContentIntent(contentIntent);
+                           case 20:
+                                        title="20 Days more to Go";
+                                        text="Open The Countdown";
+                                        notifyCall(context,title,text);
+                                        break;
 
-                     //   NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-                      //  manager.notify(0, builder.build());
+                           case 10:
+                                        title="10 more Days to Go";
+                                        text="Open The Countdown";
+                                        notifyCall(context,title,text);
+                                        break;
 
+                           case 5:
+                                        title="5 more Days to Go";
+                                        text="Open The Countdown";
+                                        notifyCall(context,title,text);
+                                        break;
 
+                           case 2:
+                                        title="2 Days more to Go";
+                                        text="Open The Countdown";
+                                        notifyCall(context,title,text);
+                                        break;
+
+                           case 1:
+                                       title="1 more Day to Go";
+                                       text="Open The Countdown";
+                                       notifyCall(context,title,text);
+                                       break;
+
+                           case 0: {
+                                    switch((int)hours) {
+
+                                        case 12:
+                                                    title = "12 Hours Remaining";
+                                                    text = "Open The Countdown";
+                                                    notifyCall(context, title, text);
+                                                    break;
+
+                                        case 6:
+                                                    title = "6 Hours Remaining";
+                                                    text = "Open The Countdown";
+                                                    notifyCall(context, title, text);
+                                                    break;
+
+                                        case 3:
+                                                    title = "3 Hours Remaining";
+                                                    text = "Open The Countdown";
+                                                    notifyCall(context, title, text);
+                                                    break;
+
+                                        case 1:
+                                                    title = "1 Hour Remaining";
+                                                    text = "Open The Countdown";
+                                                    notifyCall(context, title, text);
+                                                    break;
+                                    }
+                                    break;
+                           }
+                       }
                     } else {
                         tvEventStart.setVisibility(View.VISIBLE);
-                        tvEventStart.setText("The Event started");
+                        tvEventStart.setText("The Event started..Enjoy your Day");
                         textViewGone();
                     }
                 } catch (Exception e) {
@@ -125,5 +178,20 @@ public class RlCountdown extends RelativeLayout
         findViewById(R.id.textViewheader2).setVisibility(View.GONE);
     }
 
+    public void notifyCall(Context context,String title, String text)
+    {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
+                .setSmallIcon(R.drawable.reminder)
+                .setContentTitle(title)
+                .setContentText(text)
+                .setAutoCancel(true);
 
+        Intent notificationIntent = new Intent(context, HomescreenActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(contentIntent);
+
+        NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
+    }
 }

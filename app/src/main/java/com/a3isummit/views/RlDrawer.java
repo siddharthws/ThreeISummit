@@ -112,7 +112,7 @@ public class RlDrawer extends       RelativeLayout
     // ----------------------- Public APIs ----------------------- //
     public void Open()
     {
-        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(false, 3), -1 * GetListWidth(), 0, AnimObject.Slide.SLIDE_AXIS_X, null));
+        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(true, 2), -1 * GetListWidth(), 0, AnimObject.Slide.SLIDE_AXIS_X, null));
 
         // Make List visible
         rlListContainer.setVisibility(View.VISIBLE);
