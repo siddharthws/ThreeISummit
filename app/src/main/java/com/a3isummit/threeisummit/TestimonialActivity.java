@@ -1,5 +1,6 @@
 package com.a3isummit.threeisummit;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,5 +53,7 @@ public class TestimonialActivity extends BaseActivity {
 
     public void ButtonClickAdd(View view)
     {
+        Intent myIntent = new Intent(this, TestimonialAddActivity.class);
+        this.startActivity(myIntent);
     }
 }

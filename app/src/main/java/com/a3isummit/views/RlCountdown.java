@@ -155,6 +155,7 @@ public class RlCountdown extends RelativeLayout
                                     }
                                     break;
                            }
+                           default:     break;
                        }
                     } else {
                         tvEventStart.setVisibility(View.VISIBLE);
@@ -179,18 +180,22 @@ public class RlCountdown extends RelativeLayout
 
     public void notifyCall(Context context,String title, String text)
     {
+        Intent notificationIntent = new Intent(context, HomescreenActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(context, (int)System.currentTimeMillis(), notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setSmallIcon(R.drawable.reminder)
                 .setContentTitle(title)
                 .setContentText(text)
                 .setAutoCancel(true);
 
-        Intent notificationIntent = new Intent(context, HomescreenActivity.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(contentIntent);
+
+
+
+        builder.setContentIntent(contentIntent).setAutoCancel(true);
 
         NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(0, builder.build());
+
     }
 }

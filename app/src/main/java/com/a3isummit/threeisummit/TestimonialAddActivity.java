@@ -14,25 +14,25 @@ import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.server.FeedbackServerTask;
 import com.a3isummit.server.ServerInterfaces;
+import com.a3isummit.server.TestimonialAddServerTask;
 import com.a3isummit.statics.AppPreferences;
 import com.a3isummit.views.RlAbout;
 import com.a3isummit.views.RlCountdown;
 import com.a3isummit.views.RlDrawer;
 import com.a3isummit.views.RlEvent;
 
-public class FeedbackActivity extends BaseActivity implements ServerInterfaces.IfaceBasic {
-    private ActivityViewHolders.Feedback ui = null;
+public class TestimonialAddActivity extends BaseActivity implements ServerInterfaces.IfaceBasic {
+    private ActivityViewHolders.TestimonialAdd ui = null;
 
     public void SetViewHolder()
     {
         // Init holder
-        ui = new ActivityViewHolders.Feedback();
-        ui.vwContent = getLayoutInflater().inflate(R.layout.activity_feedback, null);
+        ui = new ActivityViewHolders.TestimonialAdd();
+        ui.vwContent = getLayoutInflater().inflate(R.layout.activity_testimonial_add, null);
 
         // Find all views form layout
-        ui.fbTextview = (TextView) ui.vwContent.findViewById(R.id.tv1);
-        ui.fbEdittext1 = (EditText) ui.vwContent.findViewById(R.id.edtxt1);
-        ui.fbEdittext2 = (EditText) ui.vwContent.findViewById(R.id.edtxt2);
+        ui.tmTextview = (TextView) ui.vwContent.findViewById(R.id.edtxt1);
+
         ui.submit = (Button) ui.vwContent.findViewById(R.id.bt1);
 
         // Set Holder
@@ -47,7 +47,7 @@ public class FeedbackActivity extends BaseActivity implements ServerInterfaces.I
 
     public static void Start(BaseActivity activity)
     {
-        BaseActivity.Start(activity, FeedbackActivity.class, -1, null, MacRequestCodes.INVALID, null);
+        BaseActivity.Start(activity, TestimonialAddActivity.class, -1, null, MacRequestCodes.INVALID, null);
     }
 
     // Button Click APIs
@@ -58,29 +58,29 @@ public class FeedbackActivity extends BaseActivity implements ServerInterfaces.I
 
     public void ButtonClickFetch(View view)
     {
-        //suggeston
-        String suggestion=ui.fbEdittext1.getText().toString();
+        //testimonial
+        String suggestion=ui.tmTextview.getText().toString();
 
-        //name of user
-        String username=ui.fbEdittext2.getText().toString();
+
 
         AppPreferences.Init(this);
-        FeedbackServerTask feedbackServerTask = new FeedbackServerTask(this,AppPreferences.getApp_id(),username,suggestion);
-        feedbackServerTask.SetBasicInterface(this);
-        feedbackServerTask.execute();
+        TestimonialAddServerTask testimonialAddServerTask = new TestimonialAddServerTask(this, AppPreferences.getApp_id(), AppPreferences.GetName(),suggestion);
+        testimonialAddServerTask.SetBasicInterface(this);
+        testimonialAddServerTask.execute();
+
     }
 
     @Override
     public void onServerSuccess() {
-        Dbg.Toast(this, "It is valuable to us.....", Toast.LENGTH_SHORT);
-        ui.fbEdittext1.setText("");
-        ui.fbEdittext2.setText("");
+        Dbg.Toast(this, "Have a Nice Day...", Toast.LENGTH_SHORT);
+        finish();
+
     }
 
     @Override
     public void onServerFailure() {
 
-        Dbg.Toast(getApplicationContext(), "Failed to Send Feedback...", Toast.LENGTH_SHORT);
+        Dbg.Toast(getApplicationContext(), "Failed to Register your Views...", Toast.LENGTH_SHORT);
 
     }
 

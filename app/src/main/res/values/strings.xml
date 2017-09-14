@@ -3,6 +3,7 @@
 
     <string name="activity_name_homescreen">3I Summit</string>
     <string name="activity_name_feedback">Feedback</string>
+    <string name="activity_name_testimonial_add">Add a Testimonial</string>
 
     <string name="counter">Wait...</string>
     <string name="countleft">For BRAND SLAM</string>
@@ -16,6 +17,8 @@
 
 
     <string name="feedback_text">Please provide your valuable suggestions to improve the app...</string>
+
+    <string name="testimonial_text">Please provide your View about the Brand Slam 2017...</string>
 
     <string name="notifyTitle">Sample notification</string>
     <string name="activity_name_testimonial">Testimonials</string>

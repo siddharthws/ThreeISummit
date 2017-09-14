@@ -1,6 +1,7 @@
 package com.a3isummit.server;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.a3isummit.debug.Dbg;
@@ -16,15 +17,15 @@ import javax.crypto.Mac;
  * Created by Siddharth on 02-09-2017.
  */
 
-public class RegisterServerTask extends BaseServerTask
+public class FeedbackServerTask extends BaseServerTask
 {
     // ----------------------- Constants ----------------------- //
-    private static final String TAG = "SEND_SMS_SERVER_TASK";
+    private static final String TAG = "FEEDBACK_TO_SERVER";
 
     // Server info for this server task
-    private static final ServerObject INFO = new ServerObject(  MacServer.REQUEST_TYPE_REGISTER,
-                                                                MacServer.REQUEST_METHOD_POST,
-                                                                MacServer.BASE_SERVER_URL + MacServer.SERVLET_USERS);
+    private static final ServerObject INFO = new ServerObject(  MacServer.REQUEST_TYPE_FEEDBACK,
+            MacServer.REQUEST_METHOD_POST,
+            MacServer.BASE_SERVER_URL + MacServer.SERVLET_FEEDBACK);
 
     // ----------------------- Classes ---------------------------//
     // ----------------------- Interfaces ----------------------- //
@@ -37,16 +38,18 @@ public class RegisterServerTask extends BaseServerTask
     // ----------------------- Globals ----------------------- //
     private boolean                 bShowDialogs    = false;
     private boolean                 bSuccess        = false;
-    private String                  phoneNo = "", name = "", email_id = "";
+
+    private String name="user", suggestion="";
+    private int app_id;
 
     // ----------------------- Constructor ----------------------- //
-    public RegisterServerTask(Context parentContext, String phoneNo, String name, String email_id)
+    public FeedbackServerTask(Context parentContext, int app_id, String name, String suggestion)
     {
         super(parentContext, INFO);
 
-        this.phoneNo = phoneNo;
+        this.app_id = app_id;
         this.name = name;
-        this.email_id=email_id;
+        this.suggestion=suggestion;
     }
 
     // ----------------------- Overrides ----------------------- //
@@ -58,9 +61,9 @@ public class RegisterServerTask extends BaseServerTask
 
         try
         {
-            requestJson.put(MacServer.KEY_PHONE_NUMBER, phoneNo);
-            requestJson.put(MacServer.KEY_USER_NAME, name);
-            requestJson.put(MacServer.KEY_EMAIL_ID, email_id);
+            requestJson.put(MacServer.KEY_APP_ID, app_id);
+            requestJson.put(MacServer.KEY_FEEDBACK_NAME, name);
+            requestJson.put(MacServer.KEY_FEEDBACK_SUGGESTION, suggestion);
         }
         catch (JSONException e)
         {
@@ -87,27 +90,39 @@ public class RegisterServerTask extends BaseServerTask
         if (listener != null)
         {
             // Validate Result
+            Log.i("Kya re...", responseJson.toString());
+            Log.i("bsucc", ""+bSuccess);
             if (bSuccess)
             {
-                int app_id=-1;
-                try {
-                    app_id=responseJson.getInt(MacServer.KEY_APP_ID);
+              try {
+                    int status=responseJson.getInt(MacServer.KEY_FEEDBACK_STATUS);
+                    int requestType=responseJson.getInt(MacServer.KEY_REQUEST_TYPE);
+
+                    if(status!= 0)
+                    {
+                        // Show error toast
+                        Dbg.Toast(parentContext, "Thank You For your Feedback...", Toast.LENGTH_SHORT);
+
+
+                        // Call Success Listener
+                        listener.onServerSuccess();
+                    } else
+                    {
+                        // Show error toast
+                        Dbg.Toast(parentContext, "Failed to Send Feedback...", Toast.LENGTH_SHORT);
+
+                        // Call Failure Listener
+                        listener.onServerFailure();
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-                //set shared Preferences
-                AppPreferences.SetUserInfo(parentContext,app_id,name,phoneNo,email_id);
-
-
-
-                // Call Success Listener
-                listener.onServerSuccess();
             }
             else
             {
                 // Show error toast
-                Dbg.Toast(parentContext, "Failed to register...", Toast.LENGTH_SHORT);
+                Dbg.Toast(parentContext, "Failed to Send Feedback...", Toast.LENGTH_SHORT);
 
                 // Call Failure Listener
                 listener.onServerFailure();

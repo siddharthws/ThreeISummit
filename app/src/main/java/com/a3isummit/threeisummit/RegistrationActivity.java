@@ -19,12 +19,16 @@ import com.a3isummit.animations.AnimHelper;
 import com.a3isummit.animations.AnimObject;
 import com.a3isummit.animations.AnimationFactory;
 import com.a3isummit.animations.PowerInterpolator;
+import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.server.RegisterServerTask;
+<<<<<<< HEAD
+=======
+import com.a3isummit.server.ServerInterfaces;
+>>>>>>> Testimonial Add integration finished along with feedback
 import com.a3isummit.statics.AppPreferences;
 
-public class RegistrationActivity extends         BaseActivity
-{
+public class RegistrationActivity extends         BaseActivity implements ServerInterfaces.IfaceBasic {
     // ----------------------- Constants ----------------------- //
     private static final String TAG = "REGISTRATION_ACTIVITY";
     ViewAnimator viewAnimator=null;
@@ -127,10 +131,13 @@ public class RegistrationActivity extends         BaseActivity
         }
         else{
 
-            AppPreferences.SetUserInfo(this,ui.tv_username.getText().toString(),ui.tv_mobile.getText().toString(),ui.tv_email.getText().toString());
+            RegisterServerTask registerServerTask = new RegisterServerTask(this, ui.tv_mobile.getText().toString(), ui.tv_username.getText().toString(), ui.tv_email.getText().toString());
+            registerServerTask.execute();
 
-            setResult(RESULT_OK);
-            finish();
+            registerServerTask.SetBasicInterface(this);
+
+
+
         }
 
     }
@@ -140,6 +147,21 @@ public class RegistrationActivity extends         BaseActivity
         } else {
             return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
         }
+    }
+
+    @Override
+    public void onServerSuccess() {
+        Dbg.Toast(this, "Registered Successfully", Toast.LENGTH_SHORT);
+        setResult(RESULT_OK);
+        finish();
+
+    }
+
+    @Override
+    public void onServerFailure() {
+
+        Toast.makeText(getApplicationContext(),"Cannot Register",Toast.LENGTH_SHORT).show();
+
     }
 
     // ----------------------- Private APIs ----------------------- //
