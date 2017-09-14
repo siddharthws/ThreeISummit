@@ -22,10 +22,8 @@ import com.a3isummit.animations.PowerInterpolator;
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.server.RegisterServerTask;
-<<<<<<< HEAD
-=======
+
 import com.a3isummit.server.ServerInterfaces;
->>>>>>> Testimonial Add integration finished along with feedback
 import com.a3isummit.statics.AppPreferences;
 
 public class RegistrationActivity extends         BaseActivity implements ServerInterfaces.IfaceBasic {
