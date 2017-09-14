@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+        android:id="@+id/rl_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,40 +15,21 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@drawable/bg_white_shadow_down">
-
-        <RelativeLayout
-            android:id="@+id/rl_toolbar_drawer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true">
+        android:background="@color/Indigo">
 
             <ImageButton
                 android:id="@+id/ib_toolbar_drawer"
                 android:layout_width="@dimen/toolbar_button_height_width"
                 android:layout_height="@dimen/toolbar_button_height_width"
                 android:background="?attr/selectableItemBackground"
-                android:padding="@dimen/toolbar_button_padding"
-                android:src="@mipmap/icon_drawer_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="0dp"
+                android:src="@mipmap/icons8_bureau_48"
                 android:scaleType="fitXY"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:onClick="ButtonClickDrawer"/>
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/tv_toolbar_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/rl_toolbar_drawer"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:textSize="@dimen/textsize_primary"
-            android:textColor="@color/GREY_9"
-            android:text="@string/activity_name_homescreen"/>
 
     </RelativeLayout>
 
@@ -55,11 +37,12 @@
     <LinearLayout
         android:id="@+id/ll_tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal"
+
         android:gravity="center_vertical"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bg_white_shadow_up">
+        android:background="@color/Blue_Grey">
 
         <ImageButton
             android:id="@+id/ibCountdown"
@@ -68,7 +51,7 @@
             android:layout_weight="1"
             android:scaleType="centerInside"
             android:background="@android:color/transparent"
-            android:src="@mipmap/icon_drawer_grey"
+            android:src="@mipmap/icons8_time_48"
             android:onClick="ButtonClickCountdown"/>
 
         <ImageButton
@@ -78,7 +61,7 @@
             android:layout_weight="1"
             android:scaleType="centerInside"
             android:background="@android:color/transparent"
-            android:src="@mipmap/icon_drawer_grey"
+            android:src="@mipmap/icons8_info_48"
             android:onClick="ButtonClickAbout"/>
 
         <ImageButton
@@ -88,7 +71,7 @@
             android:layout_weight="1"
             android:scaleType="centerInside"
             android:background="@android:color/transparent"
-            android:src="@mipmap/icon_drawer_grey"
+            android:src="@mipmap/icons8_schedule_48"
             android:onClick="ButtonClickEvent"/>
 
     </LinearLayout>
@@ -121,10 +104,18 @@
     </RelativeLayout>
 
 
+
+
+    <RelativeLayout
+            android:id="@+id/rl_touch_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_below="@id/rl_toolbar_homescreen"
+    android:layout_above="@id/ll_tabs"></RelativeLayout>
+
     <com.a3isummit.views.RlDrawer
-        android:id="@+id/rl_drawer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-
+            android:id="@+id/rl_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 </RelativeLayout>

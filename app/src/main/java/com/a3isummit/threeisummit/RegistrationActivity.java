@@ -20,6 +20,7 @@ import com.a3isummit.animations.AnimObject;
 import com.a3isummit.animations.AnimationFactory;
 import com.a3isummit.animations.PowerInterpolator;
 import com.a3isummit.macros.MacRequestCodes;
+import com.a3isummit.server.RegisterServerTask;
 import com.a3isummit.statics.AppPreferences;
 
 public class RegistrationActivity extends         BaseActivity
@@ -27,6 +28,7 @@ public class RegistrationActivity extends         BaseActivity
     // ----------------------- Constants ----------------------- //
     private static final String TAG = "REGISTRATION_ACTIVITY";
     ViewAnimator viewAnimator=null;
+    RegisterServerTask registerServerTask=null;
     Animation rotation=null;
 
     // ----------------------- Classes ---------------------------//
@@ -124,6 +126,7 @@ public class RegistrationActivity extends         BaseActivity
             Toast.makeText(getApplicationContext(),"Invalid Number",Toast.LENGTH_SHORT).show();
         }
         else{
+
             AppPreferences.SetUserInfo(this,ui.tv_username.getText().toString(),ui.tv_mobile.getText().toString(),ui.tv_email.getText().toString());
 
             setResult(RESULT_OK);

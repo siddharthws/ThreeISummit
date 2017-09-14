@@ -174,7 +174,6 @@ public class RlCountdown extends RelativeLayout
         findViewById(R.id.LinearLayout2).setVisibility(View.GONE);
         findViewById(R.id.LinearLayout3).setVisibility(View.GONE);
         findViewById(R.id.LinearLayout4).setVisibility(View.GONE);
-        findViewById(R.id.textViewheader1).setVisibility(View.GONE);
         findViewById(R.id.textViewheader2).setVisibility(View.GONE);
     }
 

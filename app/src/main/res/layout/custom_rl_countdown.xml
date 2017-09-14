@@ -7,33 +7,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@android:color/darker_gray">
+    android:background="@color/Indigo">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/counter"
-        android:textSize="30sp"
-        android:textColor="@color/WHITE"
-        android:textStyle="bold|italic"
-        android:layout_above="@+id/relativeLayout"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewheader1" />
+
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/relativeLayout">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="93dp"
+            android:background="@color/Indigo"
+    >
 
         <LinearLayout
             android:id="@+id/LinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/Indigo"
+        >
 
             <TextView
                 android:id="@+id/tveventStart"
@@ -53,18 +49,20 @@
                 android:layout_weight="1"
                 android:background="@drawable/counter"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+             >
 
                 <TextView
                     android:id="@+id/txtDay"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="10"
                     android:gravity="center"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#4a0000"
+                    android:textColor="@color/WHITE"
                     android:textSize="35sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                android:background="@drawable/styletimer"/>
 
                 <TextView
                     android:id="@+id/txt_Day"
@@ -74,7 +72,8 @@
                     android:gravity="center_horizontal"
                     android:text="@string/days"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#fff"
+                    android:textColor="@color/WHITE"
+                    android:background="@color/Indigo"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -88,15 +87,16 @@
                 android:orientation="vertical" >
 
                 <TextView
-                    android:id="@+id/txtHour"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#4a0000"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
+                        android:id="@+id/txtHour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/WHITE"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/styletimer"/>
 
                 <TextView
                     android:id="@+id/txt_Hour"
@@ -106,8 +106,9 @@
                     android:gravity="center_horizontal"
                     android:text="@string/hours"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#fff"
-                    android:textStyle="bold" />
+                    android:textColor="@color/WHITE"
+                    android:textStyle="bold"
+                    android:background="@color/Indigo"/>
             </LinearLayout>
 
             <LinearLayout
@@ -117,18 +118,20 @@
                 android:layout_weight="1"
                 android:background="@drawable/counter"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+            >
 
                 <TextView
-                    android:id="@+id/txtMinute"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:gravity="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#4a0000"
-                    android:textSize="35sp"
-                    android:textStyle="bold" />
+                        android:id="@+id/txtMinute"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/WHITE"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/styletimer"/>
 
                 <TextView
                     android:id="@+id/txt_Minute"
@@ -138,8 +141,9 @@
                     android:gravity="center_horizontal"
                     android:text="@string/minutes"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#fff"
-                    android:textStyle="bold" />
+                    android:textColor="@color/WHITE"
+                    android:textStyle="bold"
+                    android:background="@color/Indigo"/>
             </LinearLayout>
 
             <LinearLayout
@@ -155,11 +159,12 @@
                     android:id="@+id/txtSecond"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:layout_weight="10"
                     android:gravity="center"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#4a0000"
+                    android:textColor="@color/WHITE"
                     android:textSize="35sp"
+                    android:background="@drawable/styletimer"
                     android:textStyle="bold" />
 
                 <TextView
@@ -170,21 +175,23 @@
                     android:gravity="center_horizontal"
                     android:text="@string/seconds"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#fff"
+                    android:textColor="@color/WHITE"
+                    android:background="@color/Indigo"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/countleft"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewheader2"
-        android:textSize="35sp"
-        android:textStyle="bold|italic"
-        android:textColor="@android:color/white" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/countleft"
+            android:id="@+id/textViewheader2"
+            android:textSize="35sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/WHITE"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="82dp"/>
 
 </RelativeLayout>

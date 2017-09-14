@@ -17,7 +17,7 @@ public class AnimHelper
     // ----------------------- Constants ----------------------- //
     private static final String TAG = "ANIM_HELPER";
 
-    private static final int ANIM_DURATION_MS = 2000;
+    private static final int ANIM_DURATION_MS = 500;
 
     // ----------------------- Classes ---------------------------//
     // ----------------------- Interfaces ----------------------- //

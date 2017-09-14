@@ -47,6 +47,9 @@ public class ActivityViewHolders
     {
         // Toolbar Buttons
         public ImageButton ibDrawer     = null;
+        public ImageButton ibCountdown=null;
+        public ImageButton ibEvent=null;
+        public ImageButton ibAbout=null;
 
         // Drawer Layout
         public RlDrawer rlDrawer = null;
@@ -55,6 +58,9 @@ public class ActivityViewHolders
         public RlCountdown rlCountdown = null;
         public RlAbout rlAbout = null;
         public RlEvent rlEvent = null;
+
+
+        public RelativeLayout rlWrapper = null;
     }
 
     public static class Invite extends Base {

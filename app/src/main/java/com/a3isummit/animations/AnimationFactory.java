@@ -41,7 +41,7 @@ import android.widget.ViewAnimator;
  */
 public class AnimationFactory {
 	
-	private static final int DEFAULT_FLIP_TRANSITION_DURATION = 500;
+	private static  int DEFAULT_FLIP_TRANSITION_DURATION = 500;
 
 	/**
 	 * The {@code FlipDirection} enumeration defines the most typical flip view transitions: left-to-right and right-to-left. {@code FlipDirection} is used during the creation of {@link FlipAnimation} animations.

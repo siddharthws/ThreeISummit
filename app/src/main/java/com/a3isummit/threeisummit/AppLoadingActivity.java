@@ -47,8 +47,8 @@ public class AppLoadingActivity     extends     BaseActivity
 
 
         // Activity View
-        ui.pbLoading    = (ProgressBar)    ui.vwContent.findViewById(R.id.pb_load_progress);
-        ui.tvLoading    = (TextView)       ui.vwContent.findViewById(R.id.tvAppLoadActionLabel);
+       // ui.pbLoading    = (ProgressBar)    ui.vwContent.findViewById(R.id.pb_load_progress);
+        //ui.tvLoading    = (TextView)       ui.vwContent.findViewById(R.id.tvAppLoadActionLabel);
 
         // Set Holder
         holder = ui;
