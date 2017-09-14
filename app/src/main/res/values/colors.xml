@@ -19,4 +19,6 @@
 
     <!-- Translucent Colors -->
     <color name="BLACK_ALPHA">#77000000</color>
+    <color name="BLUE_LIGHT">#42d7f4</color>
+    <color name="GREEN_LIGHT">#41f45c</color>
 </resources>

@@ -1,14 +1,7 @@
 package com.a3isummit.threeisummit;
 
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.*;
 
 import com.a3isummit.views.RlAbout;
 import com.a3isummit.views.RlCountdown;
@@ -39,6 +32,15 @@ public class ActivityViewHolders
 
     public static class Registration extends Base
     {
+        //TextViews for Register Page
+        public EditText tv_username=null;
+        public  EditText tv_mobile=null;
+        public  EditText tv_email=null;
+        public ImageView iv_image=null;
+
+        //Button for onclick
+        public Button b_register=null;
+
     }
 
     public static class Homescreen extends Base
