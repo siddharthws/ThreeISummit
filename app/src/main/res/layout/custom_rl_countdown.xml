@@ -7,14 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/GREY_4">
+    android:background="@android:color/darker_gray">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/counter"
         android:textSize="30sp"
-        android:textColor="#ffeeee"
+        android:textColor="@color/WHITE"
         android:textStyle="bold|italic"
         android:layout_above="@+id/relativeLayout"
         android:layout_centerHorizontal="true"
@@ -185,6 +185,6 @@
         android:id="@+id/textViewheader2"
         android:textSize="35sp"
         android:textStyle="bold|italic"
-        android:textColor="@android:color/background_dark" />
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
