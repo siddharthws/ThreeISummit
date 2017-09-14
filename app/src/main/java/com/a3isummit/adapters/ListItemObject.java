@@ -1,5 +1,6 @@
 package com.a3isummit.adapters;
 
+import com.a3isummit.objects.GuestObject;
 import com.a3isummit.objects.TestimonialObject;
 
 /**
@@ -17,7 +18,8 @@ public class ListItemObject
     public static final int TYPE_DRAWER_ITEM_SEPARATOR  = 2;        // Drawer items separator
     public static final int TYPE_DRAWER_GROUP_SEPARATOR = 3;        // Drawer Group separator
 
-    public static final int TYPE_TESTIMONIAL            = 4;        // Actual Drawer view with image and text
+    public static final int TYPE_TESTIMONIAL            = 4;
+    public static final int TYPE_GUEST                  = 5;
 
     // ----------------------- Classes ---------------------------//
     // Base Class for list Item Data
@@ -68,6 +70,20 @@ public class ListItemObject
             super(TYPE_TESTIMONIAL, -1);
 
             this.testimonial              = testimonial;
+        }
+    }
+
+    public static class Guest extends Base
+    {
+        // ----------------------- Globals ----------------------- //
+        public GuestObject guest = null;
+
+        // ----------------------- Constructor ----------------------- //
+        public Guest(GuestObject guest)
+        {
+            super(TYPE_GUEST, -1);
+
+            this.guest              = guest;
         }
     }
 }

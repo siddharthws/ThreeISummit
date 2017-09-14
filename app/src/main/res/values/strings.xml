@@ -19,6 +19,7 @@
 
     <string name="notifyTitle">Sample notification</string>
     <string name="activity_name_testimonial">Testimonials</string>
+    <string name="activity_name_guest">Guests</string>
 
 
 </resources>

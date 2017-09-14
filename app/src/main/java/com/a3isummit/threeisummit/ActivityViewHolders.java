@@ -76,4 +76,9 @@ public class ActivityViewHolders
     {
         public ListView lvList = null;
     }
+
+    public static class Guest extends Base
+    {
+        public ListView lvList = null;
+    }
 }

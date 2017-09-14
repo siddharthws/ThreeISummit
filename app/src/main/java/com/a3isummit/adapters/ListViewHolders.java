@@ -36,4 +36,12 @@ public class ListViewHolders
         public TextView tvDate = null;
         public TextView tvText = null;
     }
+
+    // Testimonial List Items
+    public static class Guest
+    {
+        public TextView tvName = null;
+        public TextView tvDesignation = null;
+        public TextView tvCompany = null;
+    }
 }

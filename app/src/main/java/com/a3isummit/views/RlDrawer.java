@@ -36,12 +36,14 @@ public class RlDrawer extends       RelativeLayout
     public static final int DRAWER_ACTION_GATE_PASS         = 5;
     public static final int DRAWER_ACTION_EXIT              = 6;
     public static final int DRAWER_ACTION_TESTIMONIAL       = 7;
+    public static final int DRAWER_ACTION_GUEST             = 8;
 
     // Drawer List Items
     public static final ListItemObject.Generic[] drawerItems =
             {
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_INVITE,                   "Invite",           0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_TESTIMONIAL,              "Testimonials",     0,                                  0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_GUEST,                    "Guests",           0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_FEEDBACK,                 "Feedback",         0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_LOCATE,                   "Locate Us",        0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_ABOUT,                    "About Us",         0,                                  0, android.R.color.transparent),

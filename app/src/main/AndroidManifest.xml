@@ -38,8 +38,9 @@
         <activity
             android:name=".FeedbackActivity"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".TestimonialActivity"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".TestimonialActivity" />
+        <activity android:name=".GuestActivity"></activity>
     </application>
 
 </manifest>
