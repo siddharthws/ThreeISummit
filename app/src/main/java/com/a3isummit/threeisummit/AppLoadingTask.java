@@ -2,6 +2,7 @@ package com.a3isummit.threeisummit;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.os.SystemClock;
 
 /**
  * Created by Siddharth on 24-11-2016.
@@ -39,6 +40,8 @@ public class AppLoadingTask extends AsyncTask<Void, Integer, Void>
     @Override
     protected Void doInBackground(Void... params)
     {
+        SystemClock.sleep(3000);
+
         return null;
     }
 

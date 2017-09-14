@@ -133,6 +133,10 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
                 InviteActivity.Start(this);
                 break;
             }
+            case RlDrawer.DRAWER_ACTION_ABOUT:
+            {
+                getLayoutInflater().inflate(R.layout.custom_rl_about,null);
+            }
         }
     }
 }

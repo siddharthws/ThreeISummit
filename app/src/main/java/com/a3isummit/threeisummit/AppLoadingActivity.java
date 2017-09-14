@@ -3,7 +3,9 @@ package com.a3isummit.threeisummit;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -38,9 +40,11 @@ public class AppLoadingActivity     extends     BaseActivity
     @Override
     public void SetViewHolder()
     {
+        Log.i(TAG,"inside app_loading");
         // Init holder
         ui = new ActivityViewHolders.AppLoading();
         ui.vwContent = getLayoutInflater().inflate(R.layout.activity_app_loading, null);
+
 
         // Activity View
         ui.pbLoading    = (ProgressBar)    ui.vwContent.findViewById(R.id.pb_load_progress);
@@ -66,6 +70,7 @@ public class AppLoadingActivity     extends     BaseActivity
         // TODO : Remove Hack once server has been implemented
         if (AppPreferences.GetName().length() == 0)
         {
+
             // Start Registration Activity
             SetRegistrationResultListener(this);
             RegistrationActivity.Start(this);
@@ -100,7 +105,7 @@ public class AppLoadingActivity     extends     BaseActivity
     }
 
     // ----------------------- Public APIs ----------------------- //
-    // Helper API to start thie activity
+    // Helper API to start the activity
     public static void Start(BaseActivity activity, Bundle extras)
     {
         BaseActivity.Start(activity, AppLoadingActivity.class, Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK, extras, MacRequestCodes.INVALID, null);

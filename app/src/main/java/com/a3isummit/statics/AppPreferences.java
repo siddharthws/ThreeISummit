@@ -19,6 +19,7 @@ public class AppPreferences
     // User information
     public static final String PREF_USER_NAME               = "pref_user_name";
     public static final String PREF_USER_PHONE              = "pref_user_phone";
+    public static final String PREF_USER_EMAIL               ="pref_user_email";
 
     // ----------------------- Classes ---------------------------//
     // ----------------------- Interfaces ----------------------- //
@@ -26,6 +27,8 @@ public class AppPreferences
     // User Information
     private static String   name             = null;
     private static String   phone             = null;
+    private static String email                =null;
+
 
     // ----------------------- Constructor ----------------------- //
     // ----------------------- Overrides ----------------------- //
@@ -39,6 +42,7 @@ public class AppPreferences
         // Read user information
         name            = sharedPref.getString(PREF_USER_NAME, "");
         phone           = sharedPref.getString(PREF_USER_PHONE, "");
+        email            =sharedPref.getString(PREF_USER_EMAIL,"");
     }
 
     // ----------------------- Private APIs ----------------------- //
@@ -47,7 +51,7 @@ public class AppPreferences
      * SET APIs
      */
     // User Info
-    public static void SetUserInfo (Context context, String name, String phone)
+    public static void SetUserInfo (Context context, String name, String phone,String email)
     {
         SharedPreferences sharedPref        = context.getSharedPreferences(     PREF_FILE_NAME,
                 Context.MODE_PRIVATE);
@@ -56,11 +60,13 @@ public class AppPreferences
         // Write App registration data
         prefEdit.putString(PREF_USER_NAME,      name);
         prefEdit.putString(PREF_USER_PHONE,     phone);
+        prefEdit.putString(PREF_USER_EMAIL,email);
         prefEdit.apply();
 
         // Set cache
         AppPreferences.name = name;
         AppPreferences.phone = phone;
+        AppPreferences.email=email;
     }
 
     /*
@@ -70,6 +76,10 @@ public class AppPreferences
     public static String GetName ()
     {
         return name;
+    }
+
+    public static String getEmail() {
+        return email;
     }
 
     public static String GetPhone ()

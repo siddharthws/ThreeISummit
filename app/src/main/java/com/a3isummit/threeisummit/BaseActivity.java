@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -99,6 +100,7 @@ public abstract class BaseActivity extends AppCompatActivity
 
         // Add content to base layout
         holder.flContentContainer.addView(holder.vwContent);
+
 
         // Init Views
         Init();
