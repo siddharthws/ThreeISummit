@@ -9,8 +9,14 @@ import com.a3isummit.adapters.GuestAdapter;
 import com.a3isummit.adapters.ListItemObject;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.objects.GuestObject;
+import com.a3isummit.objects.TestimonialObject;
+import com.a3isummit.server.GuestServerTask;
+import com.a3isummit.server.ServerInterfaces;
+import com.a3isummit.statics.AppPreferences;
 
-public class GuestActivity extends BaseActivity {
+import java.util.ArrayList;
+
+public class GuestActivity extends BaseActivity implements ServerInterfaces.IfaceGuestFetch {
     private ActivityViewHolders.Guest ui = null;
     private GuestAdapter listAdapter = null;
 
@@ -30,10 +36,10 @@ public class GuestActivity extends BaseActivity {
     @Override
     public void Init()
     {
-        listAdapter = new GuestAdapter(this, ui.lvList);
-        for (GuestObject guest : GuestObject.TEMP_DATA) {
-            listAdapter.Add(new ListItemObject.Guest(guest));
-        }
+        AppPreferences.Init(this);
+        GuestServerTask guestServerTask = new GuestServerTask(this, AppPreferences.getApp_id());
+        guestServerTask.SetBasicInterface(this);
+        guestServerTask.execute();
     }
 
     public static void Start(BaseActivity activity)
@@ -45,5 +51,19 @@ public class GuestActivity extends BaseActivity {
     public void ButtonClickBack(View view)
     {
         finish();
+    }
+
+    @Override
+    public void onServerSuccess(ArrayList<GuestObject> guestObjects) {
+
+        listAdapter = new GuestAdapter(this, ui.lvList);
+        for (GuestObject guest : guestObjects) {
+            listAdapter.Add(new ListItemObject.Guest(guest));
+        }
+    }
+
+    @Override
+    public void onServerFailure() {
+
     }
 }

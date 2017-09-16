@@ -13,8 +13,14 @@ import com.a3isummit.adapters.ListItemObject;
 import com.a3isummit.adapters.TestimonialAdapter;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.objects.TestimonialObject;
+import com.a3isummit.server.ServerInterfaces;
+import com.a3isummit.server.TestimonialAddServerTask;
+import com.a3isummit.server.TestimonialFetchServerTask;
+import com.a3isummit.statics.AppPreferences;
 
-public class TestimonialActivity extends BaseActivity {
+import java.util.ArrayList;
+
+public class TestimonialActivity extends BaseActivity implements ServerInterfaces.IfaceTestFetch {
     private ActivityViewHolders.Testimonial ui = null;
     private TestimonialAdapter listAdapter = null;
 
@@ -34,10 +40,23 @@ public class TestimonialActivity extends BaseActivity {
     @Override
     public void Init()
     {
-        listAdapter = new TestimonialAdapter(this, ui.lvList);
-        for (TestimonialObject testimonial : TestimonialObject.TEMP_DATA) {
-            listAdapter.Add(new ListItemObject.Testimonial(testimonial));
-        }
+
+        AppPreferences.Init(this);
+        TestimonialFetchServerTask testimonialFetchServerTask = new TestimonialFetchServerTask(this, AppPreferences.getApp_id());
+        testimonialFetchServerTask.SetBasicInterface(this);
+        testimonialFetchServerTask.execute();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        //call on Resume
+        TestimonialFetchServerTask testimonialFetchServerTask = new TestimonialFetchServerTask(this, AppPreferences.getApp_id());
+        testimonialFetchServerTask.SetBasicInterface(this);
+        testimonialFetchServerTask.execute();
+
     }
 
     public static void Start(BaseActivity activity)
@@ -55,5 +74,19 @@ public class TestimonialActivity extends BaseActivity {
     {
         Intent myIntent = new Intent(this, TestimonialAddActivity.class);
         this.startActivity(myIntent);
+    }
+
+    @Override
+    public void onServerSuccess(ArrayList<TestimonialObject> testimonialObjects) {
+
+        listAdapter = new TestimonialAdapter(this, ui.lvList);
+        for (TestimonialObject testimonial : testimonialObjects) {
+            listAdapter.Add(new ListItemObject.Testimonial(testimonial));
+        }
+    }
+
+    @Override
+    public void onServerFailure() {
+
     }
 }

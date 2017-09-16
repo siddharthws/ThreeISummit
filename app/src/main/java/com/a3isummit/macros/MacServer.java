@@ -8,12 +8,13 @@ public class MacServer
 {
     // ----------------------- Constants ----------------------- //
     // Base URL of Server
-    public static final String BASE_SERVER_URL                  = "http://192.168.1.25:8080/BrandslamServer";
+    public static final String BASE_SERVER_URL                  = "http://192.168.43.59:8080/BrandslamServer";
 
     // Servlets
     public static final String SERVLET_USERS                    = "/userServlet";
     public static final String SERVLET_FEEDBACK                    = "/feedback";
     public static final String SERVLET_TESTIMONIAL                    = "/testimonials";
+    public static final String SERVLET_GUEST                    = "/guestFetch";
 
 
 
@@ -45,7 +46,21 @@ public class MacServer
     //testimonial add
     public static final String 	KEY_TESTIMONIAL_NAME      		            = "name";
     public static final String 	KEY_TESTIMONIAL_SUGGESTION     		        = "suggestion";
-    public static final String 	KEY_TESTIMONIAL_STATUS      		        = "feedback_status";
+    public static final String 	KEY_TESTIMONIAL_STATUS      		        = "testimonial_status";
+
+
+    //testimonials fetch
+    public static final String 	KEY_TESTIMONIAL_FETCH_NAME    		        = "name";
+    public static final String 	KEY_TESTIMONIAL_FETCH_SUGGESTION   		    = "suggestion";
+    public static final String 	KEY_TESTIMONIAL_FETCH_DATE     		        = "testimonial_date";
+    public static final String 	KEY_TESTIMONIAL_FETCH_ARRAY     		        = "testimonial_array";
+
+
+    //Guest LIST Fetch
+    public static final String 	KEY_GUEST_NAME    		        = "guest_name";
+    public static final String 	KEY_GUEST_DESIGNATION 		    = "guest_designation";
+    public static final String 	KEY_GUEST_COMPANY     		        = "guest_company";
+    public static final String 	KEY_GUEST_ARRAY    		        = "guest_array";
 
     // Request Types
 
@@ -54,4 +69,5 @@ public class MacServer
     public static final int         REQUEST_TYPE_FEEDBACK              = 2;
     public static final int         REQUEST_TYPE_TESTIMONIAL_ADD       = 3;
     public static final int         REQUEST_TYPE_TESTIMONIAL_FETCH     = 4;
+    public static final int         REQUEST_TYPE_GUEST_LIST     = 5;
 }
