@@ -2,6 +2,7 @@ package com.a3isummit.views;
 
 import android.animation.Animator;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -31,12 +32,13 @@ public class RlDrawer extends       RelativeLayout
     public static final int DRAWER_ACTION_NONE              = 0;
     public static final int DRAWER_ACTION_INVITE            = 1;
     public static final int DRAWER_ACTION_FEEDBACK          = 2;
-    public static final int DRAWER_ACTION_LOCATE            = 3;
-    public static final int DRAWER_ACTION_ABOUT             = 4;
-    public static final int DRAWER_ACTION_GATE_PASS         = 5;
-    public static final int DRAWER_ACTION_EXIT              = 6;
-    public static final int DRAWER_ACTION_TESTIMONIAL       = 7;
-    public static final int DRAWER_ACTION_GUEST             = 8;
+    public static final int DRAWER_ACTION_GALLERY         = 3;
+    public static final int DRAWER_ACTION_LOCATE            = 4;
+    public static final int DRAWER_ACTION_ABOUT             = 5;
+    public static final int DRAWER_ACTION_GATE_PASS         = 6;
+    public static final int DRAWER_ACTION_EXIT              = 7;
+    public static final int DRAWER_ACTION_TESTIMONIAL       = 8;
+    public static final int DRAWER_ACTION_GUEST             = 9;
 
     // Drawer List Items
     public static final ListItemObject.Generic[] drawerItems =
@@ -45,6 +47,7 @@ public class RlDrawer extends       RelativeLayout
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_TESTIMONIAL,              "Testimonials",     0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_GUEST,                    "Guests",           0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_FEEDBACK,                 "Feedback",         0,                                  0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_GALLERY,                 "Gallery",         0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_LOCATE,                   "Locate Us",        0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_ABOUT,                    "About Us",         0,                                  0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_GATE_PASS,                "Gate Pass",        0,                                  0, android.R.color.transparent),
@@ -178,6 +181,7 @@ public class RlDrawer extends       RelativeLayout
         for (int i = 0; i < drawerItems.length; i++)
         {
             listAdapter.Add(RlDrawer.drawerItems[i]);
+
         }
 
         // Set listeners

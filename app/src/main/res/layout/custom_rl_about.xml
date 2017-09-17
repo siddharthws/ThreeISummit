@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+android:background="@color/purple">
 
 
     <ScrollView
@@ -15,80 +16,96 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
         >
-            <Button
-                    android:id="@+id/button1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 1"
-            />
-            <Button
-                    android:id="@+id/button2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 2"
-            />
-            <Button
-                    android:id="@+id/button3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 3"
-            />
-
-            <Button
-                    android:id="@+id/button4"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 4"
-            />
             <TextView
-                    android:id="@+id/text"
-                    android:layout_width="fill_parent"
-                    android:layout_height="200dp"
-                    android:textSize= "30sp"
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:text="About Us"
                     android:textStyle="bold"
-                    android:gravity="center"
-                    android:textColor="#0000FF"
-                    android:text="simplecodestuffs.com"
-            />
+                    android:textColor="@color/WHITE"
 
-            <Button
-                    android:id="@+id/button5"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 5"
-            />
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Button 6"
-        />
-            <Button
-                    android:id="@+id/button7"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 6"
-            />
-            <Button
-                    android:id="@+id/button8"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 6"
-            />
-            <Button
-                    android:id="@+id/button9"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 6"
-            />
-            <Button
-                    android:id="@+id/button10"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Button 6"
-            />
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
 
-        </LinearLayout>
+                    android:padding="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/brand_slam_poster" />
+
+            <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/aboutus"
+                    android:textColor="@color/WHITE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                    android:id="@+id/textVisionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:text="Vision"
+                    android:textStyle="bold"
+                    android:textColor="@color/WHITE"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            <ImageView
+                    android:id="@+id/imageViewVision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:padding="15dp"
+                    android:src="@drawable/vision" />
+            <TextView
+                    android:id="@+id/textViewVision"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/vision"
+                    android:textColor="@color/WHITE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                    android:id="@+id/textMissionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:text="Mission"
+                    android:textStyle="bold"
+                    android:textColor="@color/WHITE"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                    android:id="@+id/imageViewMission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:padding="15dp"
+                    android:src="@drawable/mission" />
+             <TextView
+                    android:id="@+id/textViewMission"
+                    android:layout_width="wrap_content"
+                   android:padding="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:text="@string/mission"
+                    android:textColor="@color/WHITE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

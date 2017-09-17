@@ -20,6 +20,10 @@
     <color name="Amber"> #ffc107</color>
     <color name="pink">#e91e63</color>
     <color name="Blue_Grey"> #607d8b</color>
+    <color name="purple">#6A1B9A</color>
+    <color name="dark_blue">#0D47A1</color>
+    <color name="green">#4CAF50</color>
+    <color name="light_purple">#8E24AA</color>
 
     <!-- Translucent Colors -->
     <color name="BLACK_ALPHA">#77000000</color>

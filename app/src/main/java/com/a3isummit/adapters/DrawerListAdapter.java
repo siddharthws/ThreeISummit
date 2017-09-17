@@ -1,6 +1,7 @@
 package com.a3isummit.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -82,6 +83,7 @@ public class DrawerListAdapter extends BaseListAdapter implements AdapterView.On
 
             // Set title
             holder.tvTitle.setText(itemData.title);
+            holder.tvTitle.setTextColor(Color.WHITE);
         }
     }
 

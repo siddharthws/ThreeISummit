@@ -10,15 +10,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-    >
+        android:layout_centerHorizontal="true">
 
         <RelativeLayout
                 android:id="@+id/rlAppLoadIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical" android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:background="@drawable/balckmetal" android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true">
+            <ImageView
+                    android:id="@+id/imageViewMission"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/indira_logo"
+                    android:layout_above="@+id/tv_app_name" android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="51dp"/>
 
             <TextView
                     android:id="@+id/tv_app_name"
@@ -28,11 +37,10 @@
                     android:textColor="@color/BLUE_LIGHT"
                     android:textSize="@dimen/textsize_page_title"
                     android:textStyle="bold"
-
-                    android:layout_marginLeft="10dp"
                     android:background="@android:color/transparent"
-                    android:layout_marginStart="13dp" android:layout_alignParentBottom="true"
-                    android:layout_alignParentStart="true" android:layout_marginBottom="30dp"/>
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="86dp" />
         </RelativeLayout>
 
     </RelativeLayout>

@@ -4,7 +4,8 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.a3isummit.threeisummit.FeedbackActivity">
+                tools:context="com.a3isummit.threeisummit.FeedbackActivity"
+                android:background="@color/purple">
 
 
     <RelativeLayout
@@ -14,7 +15,7 @@
             android:paddingLeft="@dimen/toolbar_padding"
             android:paddingRight="@dimen/toolbar_padding"
             android:layout_alignParentTop="true"
-            android:background="@drawable/bg_white_shadow_down">
+            android:background="@color/Indigo">
 
         <RelativeLayout
                 android:id="@+id/rl_toolbar_drawer"
@@ -30,7 +31,7 @@
                     android:layout_height="@dimen/toolbar_button_height_width"
                     android:background="?attr/selectableItemBackground"
                     android:padding="@dimen/toolbar_button_padding"
-                    android:src="@mipmap/icon_back_grey"
+                    android:src="@mipmap/icon_back"
                     android:scaleType="fitXY"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
@@ -46,7 +47,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:textSize="@dimen/textsize_primary"
-                android:textColor="@color/GREY_9"
+                android:textColor="@color/WHITE"
                 android:text="@string/activity_name_testimonial_add"/>
 
     </RelativeLayout>
@@ -61,6 +62,7 @@
             android:layout_marginTop="62dp"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
+            android:textColor="@color/WHITE"
             android:layout_below="@+id/rl_toolbar_feedback"
     />
 
@@ -69,6 +71,10 @@
             android:layout_width="160pt"
             android:layout_height="100dp"
             android:hint="Enter your Feelings.."
+            android:textColor="@color/WHITE"
+            android:textColorHint="@color/WHITE"
+            android:gravity="center"
+            android:background="@drawable/edit_text_feedback"
             android:layout_marginTop="31dp" android:layout_below="@+id/tv1" android:layout_centerHorizontal="true"/>
 
 
@@ -79,7 +85,11 @@
             android:layout_height="50dp"
             android:layout_marginTop="173dp"
             android:text="Submit"
-            android:onClick="ButtonClickFetch" android:layout_below="@+id/tv1" android:layout_centerHorizontal="true"/>
+            android:onClick="ButtonClickFetch"
+            android:textColor="@color/WHITE"
+            android:background="@drawable/buttonstyleselector"
+            android:layout_below="@+id/tv1"
+            android:layout_centerHorizontal="true"/>
 
 
 

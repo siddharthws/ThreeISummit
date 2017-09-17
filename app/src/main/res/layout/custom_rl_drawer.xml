@@ -15,7 +15,8 @@
         android:id="@+id/rl_drawer_list_container"
         android:layout_width="@dimen/drawer_list_width"
         android:layout_height="match_parent"
-        android:background="@color/WHITE">
+        android:background="@color/Indigo"
+        >
 
         <ListView
             android:id="@+id/lv_drawer"
@@ -26,6 +27,7 @@
             android:layout_alignParentRight="true"
             android:layout_gravity="start"
             android:choiceMode="singleChoice"
+
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
             android:background="@android:color/transparent"/>

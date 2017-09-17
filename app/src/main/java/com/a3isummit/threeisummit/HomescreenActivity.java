@@ -142,7 +142,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         // Set Button Props
         ui.ibAbout.setBackgroundColor(Color.TRANSPARENT);
         ui.ibEvent.setBackgroundColor(Color.TRANSPARENT);
-        ui.ibCountdown.setBackgroundColor(R.color.Indigo);
+        ui.ibCountdown.setBackgroundColor(R.color.green);
     }
 
     public void ButtonClickAbout(View view)
@@ -205,7 +205,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
         ui.ibEvent.setBackgroundColor(Color.TRANSPARENT);
         ui.ibCountdown.setBackgroundColor(Color.TRANSPARENT);
-        ui.ibAbout.setBackgroundColor(R.color.Indigo);
+        ui.ibAbout.setBackgroundColor(R.color.green);
     }
 
     public void ButtonClickEvent(View view)
@@ -263,7 +263,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
         ui.ibAbout.setBackgroundColor(Color.TRANSPARENT);
         ui.ibCountdown.setBackgroundColor(Color.TRANSPARENT);
-        ui.ibEvent.setBackgroundColor(R.color.Indigo);
+        ui.ibEvent.setBackgroundColor(R.color.green);
     }
 
     @Override
