@@ -76,43 +76,39 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/rl_home_content"
+    <com.a3isummit.views.TouchWrapper
+        android:id="@+id/touch_wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/rl_toolbar_homescreen"
         android:layout_above="@id/ll_tabs">
 
-        <com.a3isummit.views.RlCountdown
-            android:id="@+id/rl_countdown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <com.a3isummit.views.RlAbout
-            android:id="@+id/rl_about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"/>
-
-        <com.a3isummit.views.RlEvent
-            android:id="@+id/rl_event"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"/>
-
-
-    </RelativeLayout>
-
-
-
-
-    <RelativeLayout
-            android:id="@+id/rl_touch_wrapper"
+        <RelativeLayout
+            android:id="@+id/rl_home_content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-    android:background="@android:color/transparent"
-    android:layout_below="@id/rl_toolbar_homescreen"
-    android:layout_above="@id/ll_tabs"></RelativeLayout>
+            android:layout_height="match_parent">
+
+            <com.a3isummit.views.RlCountdown
+                android:id="@+id/rl_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.a3isummit.views.RlAbout
+                android:id="@+id/rl_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <com.a3isummit.views.RlEvent
+                android:id="@+id/rl_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+    </com.a3isummit.views.TouchWrapper>
 
     <com.a3isummit.views.RlDrawer
             android:id="@+id/rl_drawer"

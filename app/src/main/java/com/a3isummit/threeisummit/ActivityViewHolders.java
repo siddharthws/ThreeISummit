@@ -7,6 +7,7 @@ import com.a3isummit.views.RlAbout;
 import com.a3isummit.views.RlCountdown;
 import com.a3isummit.views.RlDrawer;
 import com.a3isummit.views.RlEvent;
+import com.a3isummit.views.TouchWrapper;
 
 /**
  * Created by Siddharth on 28-06-2017.
@@ -58,9 +59,7 @@ public class ActivityViewHolders
         public RlCountdown rlCountdown = null;
         public RlAbout rlAbout = null;
         public RlEvent rlEvent = null;
-
-
-        public RelativeLayout rlWrapper = null;
+        public TouchWrapper tw = null;
     }
 
     public static class Invite extends Base {

@@ -20,12 +20,13 @@ import com.a3isummit.views.RlAbout;
 import com.a3isummit.views.RlCountdown;
 import com.a3isummit.views.RlDrawer;
 import com.a3isummit.views.RlEvent;
+import com.a3isummit.views.TouchWrapper;
 
 /**
  * Homescreen activity
  */
 
-public class HomescreenActivity extends     BaseActivity implements RlDrawer.DrawerItemClickListener {
+public class HomescreenActivity extends     BaseActivity implements RlDrawer.DrawerItemClickListener, TouchWrapper.IfaceTouchListener {
     // ----------------------- Constants ----------------------- //
     private static final String TAG = "HOMESCREEN_ACTIVITY";
 
@@ -33,9 +34,6 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
     // ----------------------- Globals ----------------------- //
     private ActivityViewHolders.Homescreen ui = null;
     private AnimHelper animHelper = null;
-    private int MIN_DISTANCE = 100;
-    float x1=0;
-    float x2=0;
 
     // ----------------------- Overrides ----------------------- //
     @Override
@@ -51,89 +49,13 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         ui.rlCountdown      = (RlCountdown)     ui.vwContent.findViewById(R.id.rl_countdown);
         ui.rlAbout              = (RlAbout)         ui.vwContent.findViewById(R.id.rl_about);
         ui.rlEvent              = (RlEvent)         ui.vwContent.findViewById(R.id.rl_event);
-        ui.rlWrapper              = (RelativeLayout)         ui.vwContent.findViewById(R.id.rl_touch_wrapper);
         ui.ibAbout              =(ImageButton) ui.vwContent.findViewById(R.id.ibAbout);
         ui.ibEvent              =(ImageButton) ui.vwContent.findViewById(R.id.ibEvent);
         ui.ibCountdown      =(ImageButton) ui.vwContent.findViewById(R.id.ibCountdown);
+        ui.tw = (TouchWrapper) ui.vwContent.findViewById(R.id.touch_wrapper);
 
         // Set Holder
         holder = ui;
-
-        ui.rlWrapper.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Log.i("ABC", "" + event.getAction());
-                switch(event.getAction())
-                {
-                    case MotionEvent.ACTION_DOWN:
-                        x1 = event.getX();
-                        Log.i("ABC", "Down X = ..." + x1);
-                        return true;
-                    case MotionEvent.ACTION_UP:
-                        x2 = event.getX();
-                        Log.i("ABC", "Up X = ..." + x2);
-                        float deltaX = x2 - x1;
-
-                        if (Math.abs(deltaX) > MIN_DISTANCE)
-                        {
-                            // Left to Right swipe action
-                            if (x2 > x1)
-                            {
-
-
-                                if (ui.rlCountdown.getVisibility() == View.VISIBLE) {
-                                    slideOutView = ui.rlCountdown;
-                                } else if (ui.rlAbout.getVisibility() == View.VISIBLE) {
-                                    slideOutView = ui.rlAbout;
-                                } else if (ui.rlEvent.getVisibility() == View.VISIBLE) {
-                                    slideOutView = ui.rlEvent;
-                                }
-                                if(slideOutView.equals(ui.rlEvent))
-                                {
-                                    ButtonClickAbout(null);
-
-                                }
-                                else if(slideOutView.equals(ui.rlAbout))
-                                {
-                                    ButtonClickCountdown(null);
-
-                                }
-
-
-                            }
-
-                            // Right to left swipe action
-                            else
-                            {
-
-                                if (ui.rlCountdown.getVisibility() == View.VISIBLE) {
-                                    slideOutView = ui.rlCountdown;
-                                } else if (ui.rlAbout.getVisibility() == View.VISIBLE) {
-                                    slideOutView = ui.rlAbout;
-                                } else if (ui.rlEvent.getVisibility() == View.VISIBLE) {
-                                    slideOutView = ui.rlEvent;
-                                }
-
-                                if(slideOutView.equals(ui.rlCountdown))
-                                {
-                                    ButtonClickAbout(null);
-                                }
-                                else if(slideOutView.equals(ui.rlAbout))
-                                {
-                                    ButtonClickEvent(null);
-                                }
-                            }
-
-                        }
-                        else
-                        {
-                            // consider as something else - a screen tap for example
-                        }
-                        return true;
-                }
-                return false;
-            }
-        });
     }
 
     @Override
@@ -144,6 +66,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
         // Set Listeners
         ui.rlDrawer.SetItemClickListener(this);
+        ui.tw.SetTouchListener(this);
     }
 
     // ----------------------- Public APIs ----------------------- //
@@ -391,6 +314,49 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
             {
                 getLayoutInflater().inflate(R.layout.custom_rl_about,null);
             }
+        }
+    }
+
+    @Override
+    public void onSwipeLeft() {
+
+        if (ui.rlCountdown.getVisibility() == View.VISIBLE) {
+            slideOutView = ui.rlCountdown;
+        } else if (ui.rlAbout.getVisibility() == View.VISIBLE) {
+            slideOutView = ui.rlAbout;
+        } else if (ui.rlEvent.getVisibility() == View.VISIBLE) {
+            slideOutView = ui.rlEvent;
+        }
+
+        if(slideOutView.equals(ui.rlCountdown))
+        {
+            ButtonClickAbout(null);
+        }
+        else if(slideOutView.equals(ui.rlAbout))
+        {
+            ButtonClickEvent(null);
+        }
+    }
+
+    @Override
+    public void onSwipeRight() {
+
+        if (ui.rlCountdown.getVisibility() == View.VISIBLE) {
+            slideOutView = ui.rlCountdown;
+        } else if (ui.rlAbout.getVisibility() == View.VISIBLE) {
+            slideOutView = ui.rlAbout;
+        } else if (ui.rlEvent.getVisibility() == View.VISIBLE) {
+            slideOutView = ui.rlEvent;
+        }
+        if(slideOutView.equals(ui.rlEvent))
+        {
+            ButtonClickAbout(null);
+
+        }
+        else if(slideOutView.equals(ui.rlAbout))
+        {
+            ButtonClickCountdown(null);
+
         }
     }
 }
