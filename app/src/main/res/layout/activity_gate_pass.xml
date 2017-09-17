@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a3isummit.threeisummit.GatePassActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:paddingLeft="@dimen/toolbar_padding"
+        android:paddingRight="@dimen/toolbar_padding"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_white_shadow_down">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/ib_toolbar_back"
+                android:layout_width="@dimen/toolbar_button_height_width"
+                android:layout_height="@dimen/toolbar_button_height_width"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/toolbar_button_padding"
+                android:src="@mipmap/icon_back_grey"
+                android:scaleType="fitXY"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="GatePassButtonClickBack"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_toolbar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rl_toolbar_drawer"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textsize_primary"
+            android:textColor="@color/GREY_9"
+            android:text="@string/activity_qrcode_title"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btg1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Back"
+        android:onClick="GatePassButtonClickBack"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:text="OR"
+        android:textAlignment="center"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="22dp"
+        android:text="TextView"
+        android:layout_above="@+id/bt1"
+        android:layout_centerHorizontal="true"
+        android:onClick="B"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@color/BLACK_ALPHA"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/rl_toolbar_feedback"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
