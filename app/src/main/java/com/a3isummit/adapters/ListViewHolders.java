@@ -44,4 +44,9 @@ public class ListViewHolders
         public TextView tvDesignation = null;
         public TextView tvCompany = null;
     }
+    public static class GuestCategory
+    {
+        public TextView tvCategory = null;
+
+    }
 }

@@ -279,9 +279,9 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
             case RlDrawer.DRAWER_ACTION_GALLERY:
                 {
-
+                    GalleryActivity.Start(this);
                 }
-                break;
+
             case RlDrawer.DRAWER_ACTION_RATE_US:
             {
                 try {
@@ -296,7 +296,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
             case RlDrawer.DRAWER_ACTION_GUEST:
             {
-                GuestActivity.Start(this);
+                GuestCategoryActivity.Start(this);
                 break;
             }
 

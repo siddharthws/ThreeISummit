@@ -18,13 +18,13 @@ import java.util.ArrayList;
  * Created by Siddharth on 02-09-2017.
  */
 
-public class GuestServerTask extends BaseServerTask {
+public class GuestServerCategoryTask extends BaseServerTask {
 
     // ----------------------- Constants ----------------------- //
     private static final String TAG = "GUEST_LIST_FETCH";
 
     // Server info for this server task
-    private static final ServerObject INFO = new ServerObject(  MacServer.REQUEST_TYPE_GUEST_LIST
+    private static final ServerObject INFO = new ServerObject(  MacServer.REQUEST_TYPE_GUEST_LIST_CATEGORY
             ,
             MacServer.REQUEST_METHOD_POST,
             MacServer.BASE_SERVER_URL + MacServer.SERVLET_GUEST);
@@ -42,16 +42,14 @@ public class GuestServerTask extends BaseServerTask {
     private boolean                 bSuccess        = false;
 
     private int app_id;
-    private int catType;
-    ArrayList<GuestObject> guestObjects = new ArrayList<>();
+    ArrayList<GuestObject.GuestObjectCategory> guestObjects = new ArrayList<>();
 
     // ----------------------- Constructor ----------------------- //
-    public GuestServerTask(Context parentContext, int app_id, int catType)
+    public GuestServerCategoryTask(Context parentContext, int app_id)
     {
         super(parentContext, INFO);
 
         this.app_id = app_id;
-        this.catType=catType;
     }
 
     // ----------------------- Overrides ----------------------- //
@@ -64,7 +62,6 @@ public class GuestServerTask extends BaseServerTask {
         try
         {
             requestJson.put(MacServer.KEY_APP_ID, app_id);
-            requestJson.put(MacServer.KEY_GUEST_CAT_TYPE,catType);
         }
         catch (JSONException e)
         {
@@ -82,13 +79,13 @@ public class GuestServerTask extends BaseServerTask {
         }
 
         //Catch the response and parse it
-       JSONArray ja = new JSONArray();
+        JSONArray ja = new JSONArray();
         try {
             ja=responseJson.getJSONArray(MacServer.KEY_GUEST_ARRAY);
             for(int i=0; i<ja.length(); i++)
             {
                 JSONObject recordJson=ja.getJSONObject(i);
-                GuestObject gs = new GuestObject(recordJson.getString(MacServer.KEY_GUEST_CATEGORY),recordJson.getString(MacServer.KEY_GUEST_NAME), recordJson.getString(MacServer.KEY_GUEST_DESIGNATION), recordJson.getString(MacServer.KEY_GUEST_COMPANY));
+                GuestObject.GuestObjectCategory gs = new GuestObject.GuestObjectCategory(recordJson.getString(MacServer.KEY_GUEST_CATEGORY));
                 guestObjects.add(gs);
             }
         } catch (JSONException e) {
@@ -110,7 +107,7 @@ public class GuestServerTask extends BaseServerTask {
             if (bSuccess)
             {
                 Log.i("arraylist: ", guestObjects.toString());
-                listener.onServerSuccess(guestObjects);
+                listener.onServerSuccessCat(guestObjects);
             }
             else
             {

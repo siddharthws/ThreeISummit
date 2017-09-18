@@ -36,12 +36,12 @@
             android:id="@+id/tv_toolbar_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/ib_toolbar_back"
-            android:layout_marginLeft="10dp"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/textsize_primary"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ib_toolbar_back"
+            android:text="Guests &amp; Awardees"
             android:textColor="@color/GREY_9"
-            android:text="@string/activity_name_guest"/>
+            android:textSize="@dimen/textsize_primary" />
 
     </RelativeLayout>
 

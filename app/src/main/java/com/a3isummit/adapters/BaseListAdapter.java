@@ -40,7 +40,11 @@ public abstract class BaseListAdapter extends BaseAdapter
 
         // Set List Adapter this this
         lvList.setAdapter(this);
+
     }
+
+
+
 
     // ----------------------- Abstracts ----------------------- //
     // Initialize view holder object for list item

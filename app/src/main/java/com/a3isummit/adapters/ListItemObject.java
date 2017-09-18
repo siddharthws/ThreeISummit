@@ -86,4 +86,18 @@ public class ListItemObject
             this.guest              = guest;
         }
     }
+
+    public static class GuestCategory extends Base
+    {
+        // ----------------------- Globals ----------------------- //
+        public GuestObject.GuestObjectCategory guestCat = null;
+
+        // ----------------------- Constructor ----------------------- //
+        public GuestCategory(GuestObject.GuestObjectCategory guestCat)
+        {
+            super(TYPE_GUEST, -1);
+
+            this.guestCat              = guestCat;
+        }
+    }
 }

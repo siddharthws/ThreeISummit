@@ -61,7 +61,10 @@ public class MacServer
     public static final String 	KEY_GUEST_NAME    		        = "guest_name";
     public static final String 	KEY_GUEST_DESIGNATION 		    = "guest_designation";
     public static final String 	KEY_GUEST_COMPANY     		        = "guest_company";
+    public static final String 	KEY_GUEST_CATEGORY 		        = "guest_category";
     public static final String 	KEY_GUEST_ARRAY    		        = "guest_array";
+    public static final String 	KEY_GUEST_CAT_TYPE    		        = "guest_catType";
+
 
     // Request Types
 
@@ -71,4 +74,5 @@ public class MacServer
     public static final int         REQUEST_TYPE_TESTIMONIAL_ADD       = 3;
     public static final int         REQUEST_TYPE_TESTIMONIAL_FETCH     = 4;
     public static final int         REQUEST_TYPE_GUEST_LIST     = 5;
+    public static final int         REQUEST_TYPE_GUEST_LIST_CATEGORY     = 6;
 }
