@@ -306,6 +306,12 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
                 break;
             }
 
+            case RlDrawer.DRAWER_ACTION_GATE_PASS:
+            {
+                GatePassActivity.Start(this);
+                break;
+            }
+
             case RlDrawer.DRAWER_ACTION_EXIT:
             {
                 finish();
