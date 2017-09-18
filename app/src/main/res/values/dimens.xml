@@ -15,7 +15,7 @@
     <dimen name="toolbar_button_padding">6dp</dimen>
 
     <!-- Drawer Layout -->
-    <dimen name="drawer_list_width">260dp</dimen>
+    <dimen name="drawer_list_width">210dp</dimen>
     <dimen name="drawer_icon_height_width">32dp</dimen>
     <dimen name="drawer_icon_padding">8dp</dimen>
     <dimen name="drawer_item_separator_height">1dip</dimen>

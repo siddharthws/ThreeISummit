@@ -276,6 +276,13 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
                 TestimonialActivity.Start(this);
                 break;
             }
+
+            case RlDrawer.DRAWER_ACTION_GALLERY:
+                {
+
+                }
+
+
             case RlDrawer.DRAWER_ACTION_GUEST:
             {
                 GuestActivity.Start(this);
