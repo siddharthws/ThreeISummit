@@ -24,7 +24,7 @@ android:background="@color/purple">
                     android:padding="20dp"
                     android:text="About Us"
                     android:textStyle="bold"
-                    android:textColor="@color/WHITE"
+                    android:textColor="@color/orange"
 
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <ImageView
@@ -55,7 +55,7 @@ android:background="@color/purple">
                     android:padding="20dp"
                     android:text="Vision"
                     android:textStyle="bold"
-                    android:textColor="@color/WHITE"
+                    android:textColor="@color/orange"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <ImageView
                     android:id="@+id/imageViewVision"
@@ -83,7 +83,7 @@ android:background="@color/purple">
                     android:padding="20dp"
                     android:text="Mission"
                     android:textStyle="bold"
-                    android:textColor="@color/WHITE"
+                    android:textColor="@color/orange"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <ImageView
@@ -104,8 +104,68 @@ android:background="@color/purple">
                     android:textColor="@color/WHITE"
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                    android:id="@+id/textVisionFourth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:text="@string/fourth_brandslam_tittle"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                    android:id="@+id/textViewFourthContent"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/fourth_brandslam_content"
+                    android:textColor="@color/WHITE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            <ImageView
+                    android:id="@+id/imageViewFourth_Tarita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:padding="15dp"
+                    android:src="@drawable/cheta_tarita" />
+            <TextView
+                    android:id="@+id/textViewFourth_Tarita"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/fourth_brandslam_tarita"
+                    android:textColor="@color/WHITE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</LinearLayout>
+
+            <ImageView
+                    android:id="@+id/imageViewFourth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:padding="15dp"
+                    android:src="@drawable/fourth_BS_chetan" />
+            <TextView
+                    android:id="@+id/textViewFourth"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/fourth_brandslam_chetan"
+                    android:textColor="@color/WHITE"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>
