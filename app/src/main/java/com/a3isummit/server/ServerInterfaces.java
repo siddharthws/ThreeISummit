@@ -27,6 +27,7 @@ public class ServerInterfaces
     public interface IfaceGuestFetch
     {
         void onServerSuccess(ArrayList<GuestObject> guestObjects);
+        void onServerSuccessCat(ArrayList<GuestObject.GuestObjectCategory> guestObjects);
         void onServerFailure();
     }
 }

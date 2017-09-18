@@ -100,4 +100,13 @@ public class ActivityViewHolders
         public TextView textView = null;
         public Button submit = null;
     }
+
+    public static class Gallery extends Base
+    {
+        public ImageView imageView1 =null;
+        public ImageView imageView2 =null;
+        public ImageView imageView3 =null;
+
+        public Button submit = null;
+    }
 }

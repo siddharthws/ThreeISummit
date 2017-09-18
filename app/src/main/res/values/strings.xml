@@ -28,7 +28,7 @@
 
     <string name="notifyTitle">Sample notification</string>
     <string name="activity_name_testimonial">Testimonials</string>
-    <string name="activity_name_guest">Guests</string>
+    <string name="activity_name_guest">Guests and Awardees</string>
     <string name="title_activity_gate_pass">GatePassActivity</string>
 
     <string name="activity_qrcode_title">Gate Pass</string>

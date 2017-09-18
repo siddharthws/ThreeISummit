@@ -36,8 +36,14 @@ public class GuestActivity extends BaseActivity implements ServerInterfaces.Ifac
     @Override
     public void Init()
     {
+        int catType=-1;
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            catType = extras.getInt("itemtype");
+        }
+
         AppPreferences.Init(this);
-        GuestServerTask guestServerTask = new GuestServerTask(this, AppPreferences.getApp_id());
+        GuestServerTask guestServerTask = new GuestServerTask(this, AppPreferences.getApp_id(), catType);
         guestServerTask.SetBasicInterface(this);
         guestServerTask.execute();
     }
@@ -60,6 +66,11 @@ public class GuestActivity extends BaseActivity implements ServerInterfaces.Ifac
         for (GuestObject guest : guestObjects) {
             listAdapter.Add(new ListItemObject.Guest(guest));
         }
+    }
+
+    @Override
+    public void onServerSuccessCat(ArrayList<GuestObject.GuestObjectCategory> guestObjects) {
+
     }
 
     @Override
