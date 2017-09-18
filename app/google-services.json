@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "266269856088",
+    "firebase_url": "https://threeisummit.firebaseio.com",
+    "project_id": "threeisummit",
+    "storage_bucket": "threeisummit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266269856088:android:893e1bb2949b31e0",
+        "android_client_info": {
+          "package_name": "com.a3isummit.threeisummit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266269856088-kivuahcpiuicr55j6n384pi5jqssun36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.a3isummit.threeisummit",
+            "certificate_hash": "d5c1d38786f5046beae62383ad3fc2fdfe3268b2"
+          }
+        },
+        {
+          "client_id": "266269856088-dbp1o5fb1sev3odmi4nsl3ntmhapvv4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQIrCUjdjKd6kiStsJ5hhIw9UHF0YRPrU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266269856088-dbp1o5fb1sev3odmi4nsl3ntmhapvv4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
