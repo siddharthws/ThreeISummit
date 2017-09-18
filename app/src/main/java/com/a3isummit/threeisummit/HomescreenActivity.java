@@ -142,7 +142,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         // Set Button Props
         ui.ibAbout.setBackgroundColor(Color.TRANSPARENT);
         ui.ibEvent.setBackgroundColor(Color.TRANSPARENT);
-        ui.ibCountdown.setBackgroundColor(R.color.green);
+        ui.ibCountdown.setBackgroundColor(getResources().getColor(R.color.green));
     }
 
     public void ButtonClickAbout(View view)
@@ -205,7 +205,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
         ui.ibEvent.setBackgroundColor(Color.TRANSPARENT);
         ui.ibCountdown.setBackgroundColor(Color.TRANSPARENT);
-        ui.ibAbout.setBackgroundColor(R.color.green);
+        ui.ibAbout.setBackgroundColor(getResources().getColor(R.color.green));
     }
 
     public void ButtonClickEvent(View view)
@@ -263,7 +263,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
         ui.ibAbout.setBackgroundColor(Color.TRANSPARENT);
         ui.ibCountdown.setBackgroundColor(Color.TRANSPARENT);
-        ui.ibEvent.setBackgroundColor(R.color.green);
+        ui.ibEvent.setBackgroundColor(getResources().getColor(R.color.green));
     }
 
     @Override
@@ -281,6 +281,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
                 {
 
                 }
+                break;
 
 
             case RlDrawer.DRAWER_ACTION_GUEST:
@@ -319,8 +320,9 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
             }
             case RlDrawer.DRAWER_ACTION_ABOUT:
             {
-                getLayoutInflater().inflate(R.layout.custom_rl_about,null);
+                ButtonClickAbout(null);
             }
+            break;
         }
     }
 
