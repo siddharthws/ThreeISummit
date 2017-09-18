@@ -33,6 +33,7 @@ public class MacServer
 
     // User info related keys
     public static final String 	KEY_APP_ID           		    = "app_id";
+    public static final String 	KEY_APP_GATE_PASS           	= "app_gate_pass";
     public static final String 	KEY_USER_NAME      		        = "user_name";
     public static final String 	KEY_PHONE_NUMBER      		    = "phone_number";
     public static final String  KEY_EMAIL_ID                    =  "email_id";
@@ -40,7 +41,7 @@ public class MacServer
     //Feedback Related Keys
     public static final String 	KEY_FEEDBACK_NAME      		        = "name";
     public static final String 	KEY_FEEDBACK_SUGGESTION      		= "suggestion";
-    public static final String 	KEY_FEEDBACK_STATUS      		        = "feedback_status";
+    public static final String 	KEY_FEEDBACK_STATUS      		    = "feedback_status";
 
 
     //testimonial add

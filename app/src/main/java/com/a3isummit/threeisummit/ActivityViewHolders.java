@@ -93,4 +93,11 @@ public class ActivityViewHolders
     {
         public ListView lvList = null;
     }
+
+    public static class GatePass extends Base
+    {
+        public ImageView imageView =null;
+        public TextView textView = null;
+        public Button submit = null;
+    }
 }

@@ -90,14 +90,16 @@ public class RegisterServerTask extends BaseServerTask
             if (bSuccess)
             {
                 int app_id=-1;
+                int app_gate_pass=-1;
                 try {
                     app_id=responseJson.getInt(MacServer.KEY_APP_ID);
+                    app_gate_pass=responseJson.getInt(MacServer.KEY_APP_GATE_PASS);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
 
                 //set shared Preferences
-                AppPreferences.SetUserInfo(parentContext,app_id,name,phoneNo,email_id);
+                AppPreferences.SetUserInfo(parentContext,app_id,name,phoneNo,email_id, app_gate_pass);
 
 
 
