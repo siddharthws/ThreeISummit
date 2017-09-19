@@ -40,6 +40,7 @@ public class RlDrawer extends       RelativeLayout
     public static final int DRAWER_ACTION_TESTIMONIAL       = 8;
     public static final int DRAWER_ACTION_GUEST             = 9;
     public static final int DRAWER_ACTION_RATE_US             = 10;
+    public static final int DRAWER_ACTION_EVENT_SCHEDULE             = 11;
 
 
     // Drawer List Items
@@ -48,6 +49,7 @@ public class RlDrawer extends       RelativeLayout
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_INVITE,         "Invite",           0,     0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_ABOUT,   "About Us",         0, 0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_GUEST,          "Guests",           0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_EVENT_SCHEDULE,          "Event Schedule",           0,     0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_GALLERY,       "Gallery",         0,     0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_TESTIMONIAL,    "Testimonials",     0,     0, android.R.color.transparent),
                     new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_LOCATE,         "Locate Us",        0,     0, android.R.color.transparent),

@@ -105,16 +105,6 @@ android:background="@color/backdrop">
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <TextView
-                    android:id="@+id/textVisionFourth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="20dp"
-                    android:text="@string/fourth_brandslam_tittle"
-                    android:textStyle="bold"
-                    android:textColor="@color/Indigo"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-            <TextView
                     android:id="@+id/textViewFourthContent"
                     android:layout_width="wrap_content"
                     android:paddingLeft="20dp"
