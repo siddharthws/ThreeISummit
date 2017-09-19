@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.a3isummit.threeisummit.GuestActivity"
-    android:background="@color/GREY_1">
+    android:background="@color/mahroon">
 
 
     <RelativeLayout
@@ -15,7 +15,7 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@drawable/bg_white_shadow_down">
+        android:background="@color/Indigo">
 
         <ImageButton
             android:id="@+id/ib_toolbar_back"
@@ -26,7 +26,7 @@
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="10dp"
             android:layout_centerVertical="true"
-            android:src="@mipmap/icon_back_grey"
+            android:src="@mipmap/icon_back"
             android:scaleType="fitXY"
             android:focusable="false"
             android:focusableInTouchMode="false"
@@ -40,7 +40,7 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/ib_toolbar_back"
             android:text="Guests &amp; Awardees"
-            android:textColor="@color/GREY_9"
+            android:textColor="@color/WHITE"
             android:textSize="@dimen/textsize_primary" />
 
     </RelativeLayout>
@@ -51,7 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_below="@+id/rl_toolbar_guest"
-        android:divider="@android:color/transparent"/>
+        android:dividerHeight="3dp"
+        android:divider="@color/mahroon"/>
 
 
 

@@ -30,10 +30,7 @@ public class GalleryActivity extends BaseActivity {
         ui.vwContent = getLayoutInflater().inflate(R.layout.activity_gallery, null);
 
         // Find all views form layout
-        ui.imageView1=(ImageView)ui.vwContent.findViewById(R.id.imageView1);
-        ui.imageView2=(ImageView)ui.vwContent.findViewById(R.id.imageView2);
-        ui.imageView3=(ImageView)ui.vwContent.findViewById(R.id.imageView3);
-        ui.submit = (Button) ui.vwContent.findViewById(R.id.bt1);
+
 
         // Set Holder
         holder = ui;

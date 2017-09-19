@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.a3isummit.threeisummit.GatePassActivity"
-    android:background="@color/purple">
+    android:background="@color/backdrop">
 
 
 
@@ -30,7 +30,7 @@
         android:layout_marginBottom="19dp"
         android:text="OR"
         android:textAlignment="center"
-        android:textColor="@color/WHITE"
+        android:textColor="@color/dark_brown"
         android:paddingTop="10dp"
         android:textSize="30dp"
         android:layout_above="@+id/textView2"
@@ -44,7 +44,7 @@
         android:textAlignment="center"
         android:textSize="40dp"
         android:textStyle="bold"
-        android:textColor="@color/WHITE"
+        android:textColor="@color/dark_brown"
         android:layout_marginBottom="43dp"
         android:layout_above="@+id/btg1"
         android:layout_centerHorizontal="true" />

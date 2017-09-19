@@ -10,11 +10,13 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.a3isummit.animations.AnimHelper;
 import com.a3isummit.animations.AnimObject;
 import com.a3isummit.animations.PowerInterpolator;
 import com.a3isummit.macros.MacRequestCodes;
+import com.a3isummit.statics.AppPreferences;
 import com.a3isummit.statics.AppStatics;
 import com.a3isummit.views.RlAbout;
 import com.a3isummit.views.RlCountdown;
@@ -80,6 +82,10 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
     public void ButtonClickDrawer(View view)
     {
         // Open Drawer
+        AppPreferences.Init(this);
+        ui.tvuser=(TextView) findViewById(R.id.textviewuser);
+        ui.tvuser.setText(AppPreferences.GetName());
+
         ui.rlDrawer.Open();
     }
 
@@ -281,6 +287,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
                 {
                     GalleryActivity.Start(this);
                 }
+                break;
 
             case RlDrawer.DRAWER_ACTION_RATE_US:
             {
@@ -320,7 +327,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
             case RlDrawer.DRAWER_ACTION_LOCATE:
             {
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=18.611845,73.748792(3I Summit)");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q=18.611845,73.748792(Indira BrandSlam 2k17)");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 if (mapIntent.resolveActivity(getPackageManager()) != null) {
@@ -373,6 +380,12 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         } else if (ui.rlEvent.getVisibility() == View.VISIBLE) {
             slideOutView = ui.rlEvent;
         }
+        if(slideOutView.equals(ui.rlCountdown))
+        {
+            ButtonClickDrawer(null);
+
+        }
+
         if(slideOutView.equals(ui.rlEvent))
         {
             ButtonClickAbout(null);

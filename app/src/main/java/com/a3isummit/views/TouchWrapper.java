@@ -33,6 +33,8 @@ public class TouchWrapper extends FrameLayout
     private int MIN_DISTANCE = 100;
     float x1=0;
     float x2=0;
+    float y1=0;
+    float y2=0;
     // ----------------------- Constructor ----------------------- //
     public TouchWrapper(Context context)
     {
@@ -55,27 +57,34 @@ public class TouchWrapper extends FrameLayout
         {
             case MotionEvent.ACTION_DOWN:
                 x1 = event.getX();
+                y1=event.getY();
             case MotionEvent.ACTION_UP:
                 x2 = event.getX();
+                y2=event.getY();
                 float deltaX = x2 - x1;
+                float deltaY=y2-y1;
 
-                if (Math.abs(deltaX) > MIN_DISTANCE)
+                if(!(Math.abs(deltaY)>MIN_DISTANCE))
                 {
-                    // Left to Right swipe action
-                    if (x2 > x1)
+                    if (Math.abs(deltaX) > MIN_DISTANCE)
                     {
-                        listener.onSwipeRight();
+                        // Left to Right swipe action
+                        if (x2 > x1)
+                        {
+                            listener.onSwipeRight();
 
+
+                        }
+
+                        // Right to left swipe action
+                        else
+                        {
+                            listener.onSwipeLeft();
+                        }
 
                     }
-
-                    // Right to left swipe action
-                    else
-                    {
-                        listener.onSwipeLeft();
-                    }
-
                 }
+
         }
 
         return super.dispatchTouchEvent(event);

@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">ThreeISummit</string>
+    <string name="app_name">BrandSlam2k17</string>
 
     <string name="activity_name_homescreen">3I Summit</string>
     <string name="activity_name_feedback">Feedback</string>
     <string name="activity_name_testimonial_add">Add a Testimonial</string>
 
     <string name="counter">Wait...</string>
-    <string name="countleft">For BRAND SLAM</string>
+    <string name="countleft">6th INDIRA BRAND SLAM</string>
     <string name="aboutus">“A brand is the perception of an entity” and what Indira Group strongly believes in is building a strong foundation for corporate interface through excellent innovative practices. As a part of the mega events that Indira hosts, we announce the 6th ‘Indira Brand Slam Summit 2017”, a premier marketing conclave on 25th September in Pune. The theme for this year’s conclave is “Marketing 2020”.</string>
     <string name="hours">Hours</string>
     <string name="minutes">Minutes</string>
@@ -25,7 +25,7 @@
 
     <string name="testimonial_text">Please provide your View about the Brand Slam 2017...</string>
     <string name="in_progress">This Context is still in progress</string>
-
+    <string name="activity_name_gallery">Gallery</string>
     <string name="notifyTitle">Sample notification</string>
     <string name="activity_name_testimonial">Testimonials</string>
     <string name="activity_name_guest">Guests and Awardees</string>

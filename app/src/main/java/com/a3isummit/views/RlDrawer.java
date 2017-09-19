@@ -45,16 +45,16 @@ public class RlDrawer extends       RelativeLayout
     // Drawer List Items
     public static final ListItemObject.Generic[] drawerItems =
             {
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_INVITE,                   "Invite",           0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_TESTIMONIAL,              "Testimonials",     0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_GUEST,                    "Guests",           0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_FEEDBACK,                 "Feedback",         0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_GALLERY,                 "Gallery",         0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_LOCATE,                   "Locate Us",        0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_ABOUT,                    "About Us",         0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_GATE_PASS,                "Gate Pass",        0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_RATE_US,                "Rate Us",        0,                                  0, android.R.color.transparent),
-                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,             DRAWER_ACTION_EXIT,                     "Exit",             0,                                  0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_INVITE,         "Invite",           0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_ABOUT,   "About Us",         0, 0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_GUEST,          "Guests",           0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_GALLERY,       "Gallery",         0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_TESTIMONIAL,    "Testimonials",     0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_LOCATE,         "Locate Us",        0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_GATE_PASS,      "Gate Pass",        0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_FEEDBACK,       "Feedback",         0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_RATE_US,      "Rate Us",        0,     0, android.R.color.transparent),
+                    new ListItemObject.Generic(ListItemObject.TYPE_DRAWER_ITEM,  DRAWER_ACTION_EXIT,           "Exit",             0,     0, android.R.color.transparent),
             };
 
     // ----------------------- Classes ---------------------------//
@@ -142,7 +142,7 @@ public class RlDrawer extends       RelativeLayout
         animHelper.Animate(new AnimObject.Base(AnimObject.TYPE_FADE_OUT, vwCover, new PowerInterpolator(true, 1), null));
 
         // Start exit animation for drawer
-        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(false, 3), 0, -1 * GetListWidth(), AnimObject.Slide.SLIDE_AXIS_X, new Animator.AnimatorListener() {
+        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(false, 1), 0, -1 * GetListWidth(), AnimObject.Slide.SLIDE_AXIS_X, new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
 

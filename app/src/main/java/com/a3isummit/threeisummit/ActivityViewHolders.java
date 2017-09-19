@@ -56,6 +56,7 @@ public class ActivityViewHolders
         public RlDrawer rlDrawer = null;
 
         // Contents
+        public TextView tvuser=null;
         public RlCountdown rlCountdown = null;
         public RlAbout rlAbout = null;
         public RlEvent rlEvent = null;
@@ -103,10 +104,6 @@ public class ActivityViewHolders
 
     public static class Gallery extends Base
     {
-        public ImageView imageView1 =null;
-        public ImageView imageView2 =null;
-        public ImageView imageView3 =null;
 
-        public Button submit = null;
     }
 }

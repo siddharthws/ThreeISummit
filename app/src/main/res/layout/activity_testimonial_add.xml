@@ -5,7 +5,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context="com.a3isummit.threeisummit.FeedbackActivity"
-                android:background="@color/purple">
+                android:background="@color/backdrop">
 
 
     <RelativeLayout
@@ -62,7 +62,7 @@
             android:layout_marginTop="62dp"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
-            android:textColor="@color/WHITE"
+            android:textColor="@color/dark_brown"
             android:layout_below="@+id/rl_toolbar_feedback"
     />
 

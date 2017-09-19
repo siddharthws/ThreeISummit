@@ -27,6 +27,10 @@
     <color name="light_pink">#EC407A</color>
     <color name="light_red">#FF5252</color>
     <color name="orange">#FF9800</color>
+    <color name="backdrop">#EDC66B</color>
+    <color name="dark_brown">#3E2723</color>
+    <color name="mahroon">#6C3227</color>
+    <color name="dark_green">#1B5E20</color>
 
     <!-- Translucent Colors -->
     <color name="BLACK_ALPHA">#77000000</color>

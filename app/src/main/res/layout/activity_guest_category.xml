@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:background="@drawable/bg_white_shadow"
+    android:background="@drawable/edittextbrown"
     android:padding="15dp">
 
     <TextView
@@ -12,6 +12,7 @@
         android:layout_marginTop="2dp"
         android:text="TEST"
         android:textAlignment="center"
+        android:textColor="@color/dark_brown"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="30sp"
