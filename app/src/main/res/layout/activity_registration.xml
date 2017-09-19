@@ -14,7 +14,9 @@ android:paddingRight="@dimen/activity_horizontal_margin">
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
         <ViewFlipper
                 android:id="@+id/register_view_flipper"
                 android:layout_width="wrap_content"
@@ -83,10 +85,16 @@ android:background="@drawable/edittextstyle"
 
                 android:onClick="ButtonClickRegister"/>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:progressDrawable="@drawable/circular_progress_bar" />
+
+
     </LinearLayout>
-
-
-
 
 
 </RelativeLayout>

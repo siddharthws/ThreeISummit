@@ -38,6 +38,7 @@ public class ActivityViewHolders
         public  EditText tv_mobile=null;
         public  EditText tv_email=null;
         public ImageView iv_image=null;
+        public ProgressBar progressBar=null;
 
         //Button for onclick
         public Button b_register=null;

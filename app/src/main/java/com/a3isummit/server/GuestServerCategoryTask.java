@@ -1,5 +1,6 @@
 package com.a3isummit.server;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
@@ -53,6 +54,10 @@ public class GuestServerCategoryTask extends BaseServerTask {
     }
 
     // ----------------------- Overrides ----------------------- //
+
+
+
+
     @Override
     public Void doInBackground (Void... params)
     {
@@ -119,7 +124,6 @@ public class GuestServerCategoryTask extends BaseServerTask {
             }
         }
     }
-
     // ----------------------- Public APIs ----------------------- //
     // ----------------------- Private APIs ----------------------- //
 }

@@ -1,5 +1,6 @@
 package com.a3isummit.threeisummit;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 public class GuestCategoryActivity extends BaseActivity implements ServerInterfaces.IfaceGuestFetch {
     private ActivityViewHolders.Guest ui = null;
     private GuestCategoryAdapter listAdapter = null;
+
 
     public void SetViewHolder()
     {

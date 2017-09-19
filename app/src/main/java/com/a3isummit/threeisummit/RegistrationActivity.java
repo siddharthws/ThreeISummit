@@ -86,12 +86,21 @@ public class RegistrationActivity extends         BaseActivity implements Server
         animatorSet.playTogether(rotation);
         animatorSet.start();*/
 
+
+        ui.tv_username= (EditText) findViewById(R.id.edit_text_username);
+        ui.tv_mobile= (EditText) findViewById(R.id.edit_text_mobile);
+        ui.tv_email= (EditText) findViewById(R.id.edit_text_email);
+        ui.b_register= (Button) findViewById(R.id.button_register);
+        ui.progressBar=(ProgressBar)findViewById(R.id.progressBar);
+        ui.progressBar.setVisibility(View.INVISIBLE);
+
     }
 
     // ----------------------- Public APIs ----------------------- //
     public static void Start(BaseActivity activity)
     {
         BaseActivity.Start(activity, RegistrationActivity.class, -1, null, MacRequestCodes.CODE_ACTIVITY_RESULT_REGISTRATION, null);
+
     }
 
 
@@ -99,11 +108,9 @@ public class RegistrationActivity extends         BaseActivity implements Server
     // Button Click APis
     public void ButtonClickRegister(View view)
     {
+
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-        ui.tv_username= (EditText) findViewById(R.id.edit_text_username);
-        ui.tv_mobile= (EditText) findViewById(R.id.edit_text_mobile);
-        ui.tv_email= (EditText) findViewById(R.id.edit_text_email);
-        ui.b_register= (Button) findViewById(R.id.button_register);
+
         if(ui.tv_username.getText().toString().length()==0&&ui.tv_mobile.getText().toString().length()==0&&ui.tv_email.getText().toString().length()==0)
         {
             Toast.makeText(getApplicationContext(),"Fields cannot be Blank",Toast.LENGTH_SHORT).show();
@@ -128,14 +135,12 @@ public class RegistrationActivity extends         BaseActivity implements Server
             Toast.makeText(getApplicationContext(),"Invalid Number",Toast.LENGTH_SHORT).show();
         }
         else{
+            ui.progressBar.setVisibility(View.VISIBLE);
 
             RegisterServerTask registerServerTask = new RegisterServerTask(this, ui.tv_mobile.getText().toString(), ui.tv_username.getText().toString(), ui.tv_email.getText().toString());
             registerServerTask.execute();
 
             registerServerTask.SetBasicInterface(this);
-
-
-
         }
 
     }
@@ -149,6 +154,7 @@ public class RegistrationActivity extends         BaseActivity implements Server
 
     @Override
     public void onServerSuccess() {
+        ui.progressBar.setVisibility(View.GONE);
         Dbg.Toast(this, "Registered Successfully", Toast.LENGTH_SHORT);
         setResult(RESULT_OK);
         finish();

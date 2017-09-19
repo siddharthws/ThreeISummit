@@ -1,12 +1,17 @@
 package com.a3isummit.server;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacServer;
 
 import com.a3isummit.statics.AppPreferences;
+import com.a3isummit.threeisummit.R;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,6 +44,7 @@ public class RegisterServerTask extends BaseServerTask
     private boolean                 bSuccess        = false;
     private String                  phoneNo = "", name = "", email_id = "";
 
+
     // ----------------------- Constructor ----------------------- //
     public RegisterServerTask(Context parentContext, String phoneNo, String name, String email_id)
     {
@@ -47,9 +53,16 @@ public class RegisterServerTask extends BaseServerTask
         this.phoneNo = phoneNo;
         this.name = name;
         this.email_id=email_id;
+
     }
 
     // ----------------------- Overrides ----------------------- //
+
+    protected void onPreExecute() {
+        super.onPreExecute();
+
+    }
+
     @Override
     public Void doInBackground (Void... params)
     {
