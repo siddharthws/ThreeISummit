@@ -22,6 +22,7 @@ import com.a3isummit.animations.AnimHelper;
 import com.a3isummit.contacts.SyncContactsTask;
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacRequestCodes;
+import com.a3isummit.statics.AppPreferences;
 import com.a3isummit.views.RlAbout;
 import com.a3isummit.views.RlCountdown;
 import com.a3isummit.views.RlDrawer;
@@ -57,7 +58,7 @@ public class InviteActivity extends BaseActivity implements SyncContactsTask.Ifa
     @Override
     public void Init()
     {
-        syncContacts = new SyncContactsTask(this);
+       /* syncContacts = new SyncContactsTask(this);
         syncContacts.SetSyncContactListener(this);
 
         ui.lvContacts.setOnItemClickListener(this);
@@ -79,7 +80,14 @@ public class InviteActivity extends BaseActivity implements SyncContactsTask.Ifa
         else
         {
             onContactsSyncSuccess();
-        }
+        }*/
+        AppPreferences.Init(this);
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hello, You are invited to 6th INDIRA BRANDSLAM 2017 by "+AppPreferences.GetName()+".Click here to download the App: ");
+        sendIntent.setType("text/plain");
+        startActivity(sendIntent);
     }
 
     @Override
@@ -115,9 +123,14 @@ public class InviteActivity extends BaseActivity implements SyncContactsTask.Ifa
         String[] sep = title.split("\n");
         String phone = sep[1];
 
-        Intent sendIntent = new Intent(Intent.ACTION_VIEW);
-        sendIntent.setData(Uri.parse("smsto:" + phone));
-        sendIntent.putExtra("sms_body", "Hello " + sep[0] + ", You are invited to 3I Summit. Click here to download : ");
+       // Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+       // sendIntent.setData(Uri.parse("smsto:" + phone));
+       // sendIntent.putExtra("sms_body", "Hello " + sep[0] + ", You are invited to 3I Summit. Click here to download : ");
+      //  startActivity(sendIntent);
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+        sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }
 
