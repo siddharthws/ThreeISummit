@@ -19,26 +19,54 @@
                 android:orientation="vertical"
         >
             <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="20dp"
-                    android:text="@string/in_progress"
-                    android:textStyle="bold"
-                    android:textColor="@color/dark_brown"
+                android:id="@+id/tv1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="EVENT SCHEDULE"
+                android:textAlignment="center"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/dark_brown"
+                android:layout_below="@+id/rl_toolbar_feedback" android:layout_centerHorizontal="true"
+                android:layout_marginTop="23dp"/>
+            <Button
+                android:id="@+id/button_dhruv"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/buttonstyleselector"
+                android:layout_marginTop="100dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:text="Dhruv Auditorium"
 
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-            <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                android:onClick="ButtonClickDhruv"/>
+            <Button
+                android:id="@+id/button_clas1"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/buttonstyleselector"
+                android:layout_marginTop="50dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:text="classroom 1"
 
-                    android:padding="15dp"
-                    android:scaleType="centerCrop"
-                    />
+                android:onClick="ButtonClickClass1"/>
+            <Button
+                android:id="@+id/button_clas2"
+                android:textColor="#fff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/buttonstyleselector"
+                android:layout_marginTop="50dp"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:text="classroom 2"
 
-
+                android:onClick="ButtonClickClass2"/>
 
 
 

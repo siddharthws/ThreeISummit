@@ -92,6 +92,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
     View slideOutView = null;
     boolean bAnimating = false;
 
+
     public void ButtonClickCountdown(View view)
     {
         if (bAnimating) {
@@ -212,6 +213,18 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         ui.ibEvent.setBackgroundColor(Color.TRANSPARENT);
         ui.ibCountdown.setBackgroundColor(Color.TRANSPARENT);
         ui.ibAbout.setBackgroundColor(getResources().getColor(R.color.green));
+    }
+    public void ButtonClickDhruv(View v){
+        Intent myIntent = new Intent(this, DhruvActivity.class);
+        startActivity(myIntent);
+    }
+    public void ButtonClickClass1(View v){
+        Intent myIntent = new Intent(this, ClassRoomOneActivity.class);
+        startActivity(myIntent);
+    }
+    public void ButtonClickClass2(View v){
+        Intent myIntent = new Intent(this, ClassRoomTwoActivity.class);
+        startActivity(myIntent);
     }
 
     public void ButtonClickEvent(View view)

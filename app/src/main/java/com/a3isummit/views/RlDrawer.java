@@ -121,13 +121,13 @@ public class RlDrawer extends       RelativeLayout
     // ----------------------- Public APIs ----------------------- //
     public void Open()
     {
-        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(true, 2), -1 * GetListWidth(), 0, AnimObject.Slide.SLIDE_AXIS_X, null));
+        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(true, 3), -1 * GetListWidth(), 0, AnimObject.Slide.SLIDE_AXIS_X, null));
 
         // Make List visible
         rlListContainer.setVisibility(View.VISIBLE);
 
         // Fade in cover
-        animHelper.Animate(new AnimObject.Base(AnimObject.TYPE_FADE_IN, vwCover, new PowerInterpolator(true, 1), null));
+        animHelper.Animate(new AnimObject.Base(AnimObject.TYPE_FADE_IN, vwCover, new PowerInterpolator(true, 2), null));
     }
 
     public void Close()
@@ -142,7 +142,7 @@ public class RlDrawer extends       RelativeLayout
         animHelper.Animate(new AnimObject.Base(AnimObject.TYPE_FADE_OUT, vwCover, new PowerInterpolator(true, 1), null));
 
         // Start exit animation for drawer
-        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(false, 1), 0, -1 * GetListWidth(), AnimObject.Slide.SLIDE_AXIS_X, new Animator.AnimatorListener() {
+        animHelper.Animate(new AnimObject.Slide(rlListContainer, new PowerInterpolator(false, 2), 0, -1 * GetListWidth(), AnimObject.Slide.SLIDE_AXIS_X, new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
 

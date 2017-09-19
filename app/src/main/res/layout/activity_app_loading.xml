@@ -5,7 +5,7 @@
     android:id="@+id/activity_app_loading"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#424242">
+    android:background="@drawable/balckmetal">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -27,7 +27,6 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/indira_logo"
                 android:layout_marginBottom="10dp"
-                android:layout_above="@+id/imageViewlogo"
                 android:layout_centerHorizontal="true" />
             <ImageView
                     android:id="@+id/imageViewlogo"
@@ -35,11 +34,10 @@
                     android:layout_height="190dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                android:layout_marginTop="60dp"
-                    android:src="@drawable/brand_slam_poster"
-                android:layout_marginBottom="20dp"
-
-                android:layout_centerHorizontal="true" />
+                android:src="@drawable/brand_slam_poster"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/imageViewlogo1"
+                android:layout_alignParentStart="true" />
 
 
         </RelativeLayout>

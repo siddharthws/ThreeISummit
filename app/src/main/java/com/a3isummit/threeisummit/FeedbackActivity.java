@@ -59,15 +59,22 @@ public class FeedbackActivity extends BaseActivity implements ServerInterfaces.I
     public void ButtonClickFetch(View view)
     {
         //suggeston
-        String suggestion=ui.fbEdittext1.getText().toString();
+        String username=ui.fbEdittext1.getText().toString();
 
         //name of user
-        String username=ui.fbEdittext2.getText().toString();
+        String suggestion=ui.fbEdittext2.getText().toString();
+        if((suggestion=="")||(suggestion.length()==0))
+        {
+            Toast.makeText(this,"Enter Data",Toast.LENGTH_SHORT).show();
 
-        AppPreferences.Init(this);
-        FeedbackServerTask feedbackServerTask = new FeedbackServerTask(this,AppPreferences.getApp_id(),username,suggestion);
-        feedbackServerTask.SetBasicInterface(this);
-        feedbackServerTask.execute();
+        }
+        else{
+            AppPreferences.Init(this);
+            FeedbackServerTask feedbackServerTask = new FeedbackServerTask(this,AppPreferences.getApp_id(),username,suggestion);
+            feedbackServerTask.SetBasicInterface(this);
+            feedbackServerTask.execute();
+        }
+
     }
 
     @Override

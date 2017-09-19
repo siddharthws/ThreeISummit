@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.a3isummit.threeisummit.DhruvActivity"
+    android:background="@color/backdrop">
+    <RelativeLayout
+
+        android:id="@+id/rl_toolbar_dhruv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:paddingLeft="@dimen/toolbar_padding"
+        android:paddingRight="@dimen/toolbar_padding"
+        android:layout_alignParentTop="true"
+        android:background="@color/Indigo">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/ib_toolbar_back"
+                android:layout_width="@dimen/toolbar_button_height_width"
+                android:layout_height="@dimen/toolbar_button_height_width"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/toolbar_button_padding"
+                android:src="@mipmap/icon_back"
+                android:scaleType="fitXY"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="ButtonClickBack"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_toolbar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@id/rl_toolbar_drawer"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textsize_primary"
+            android:textColor="@color/WHITE"
+            android:text="Dhruv Auditorium"/>
+
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_below="@+id/rl_toolbar_dhruv"
+        ><LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="9:30 AM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Inauguration &amp; Welcome Speeches"
+            android:textColor="@color/dark_brown"/>
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="R Sudarshan, Senior Director, Marketing; Channels &amp; Alliances, Asia, Pacific &amp; Japan, Dell EMC Dr Alok Bharadwaj, (Fmr SVP &amp; Head Canon Asia Strategy centre Singapore), Managing Director-India &amp; Emerging Markets, CreoVate Transformations &amp; Consulting Private Ltd
+        Bijoe George, Head-Brand Strategy, Advertising &amp; Digital Marketing-Cisco India &amp; SAARC, ‎Cisco
+        Anand Pejawar, President – Operations, IT &amp; International Business, SBI Life Insurance Co Ltd
+        Ned Mody, Managing Director, Berkadia Commercial Mortgage LLC
+        Dr Arun Arora, Executive Chairman, Edvance Group
+        Harish S. Mehta, Chairman &amp; Managing Director, Onward Technologies Limited.
+        Dr R L Bhatia, World World CSR Day &amp; World Sustainability
+        Dr Tarita Shankar, Chairperson, Indira Group of Institutes
+        Prof. Chetan Wakalkar, Group Director, Indira Group of Institutes"
+            android:textColor="@color/dark_brown"/>
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Guest of Honors: "
+            android:textColor="@color/dark_brown"/>
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="Dr C M Dwivedi, Group Chief Human Resource Officer, Fazlani Group of Companies
+Dr Sanjay Muthal, Former Executive Director, RGF Management Search"
+            android:textColor="@color/dark_brown"/>
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="11:00 AM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="R Sudarshan, Senior Director, Marketing; Channels &amp; Alliances, Asia, Pacific &amp; Japan, Dell EMC
+"
+            android:textColor="@color/dark_brown"/>
+
+
+
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="11:30 AM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="Bijoe George, Head-Brand Strategy, Advertising &amp; Digital Marketing-Cisco India &amp; SAARC, ‎Cisco"
+            android:textColor="@color/dark_brown"/>
+
+
+
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="12:00 noon"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="Anand Pejawar, President – Operations, IT &amp; International Business, SBI Life Insurance Co Ltd"
+            android:textColor="@color/dark_brown"/>
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Topic: BRAND BUSINESS: Brand as an Idea is Bigger than Brand as a Business"
+            android:textColor="@color/dark_brown"/>
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="12:30 PM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="Jagdeep Kapoor, Brand Guru &amp; CMD, Samsik Marketing Consultants* (Orally confirmed)"
+            android:textColor="@color/dark_brown"/>
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="1:00 PM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="LUNCH BREAK"
+            android:textColor="@color/dark_brown"/>
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="(All award winners are invited to be a part of the Panel. We will have 5 panelists per session)"
+            android:textColor="@color/dark_brown"/>
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="2:00 PM - 3:00 PM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="1. Satyen Shivananda Poojary, VP Product &amp; Content Strategy, Powerdrift Studios Pvt. Ltd.
+2. Kiran Bhat, Chairperson &amp; MD, Xebec Communications Pvt Ltd.
+3. Sonali Brahma, Brand Strategist and Creative Advisor, santrawale.com
+4. Akshit Gupta, Founder, FundTonic Service Pvt. Ltd."
+            android:textColor="@color/dark_brown"/>
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Topic: - Challenges &amp; Barriers of Content Marketing for Brands?"
+            android:textColor="@color/dark_brown"/>
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="3:00 PM - 4:00 PM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Topic: - 'Purposeful Purpose: Purposeful Marketing'"
+            android:textColor="@color/dark_brown"/>
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+
+            android:text="(Confirmations are expected by Monday)"
+            android:textColor="@color/dark_brown"/>
+
+        <!-- just draw a red line -->
+        <View
+            android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/Indigo" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="4:00 PM"
+            android:textStyle="bold"
+            android:textColor="@color/Indigo"/>
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Pride of Maharashtra  / Indira Brand Slam Awards"
+            android:textColor="@color/dark_brown"/>
+
+    </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+</RelativeLayout>
