@@ -8,7 +8,7 @@ public class MacServer
 {
     // ----------------------- Constants ----------------------- //
     // Base URL of Server
-    public static final String BASE_SERVER_URL                  = "http://192.168.43.59:8080/BrandslamServer";
+    public static final String BASE_SERVER_URL                  = "http://Brandslamserver-env.ttmggjkjxc.ap-south-1.elasticbeanstalk.com";
 
     // Servlets
     public static final String SERVLET_USERS                    = "/userServlet";
