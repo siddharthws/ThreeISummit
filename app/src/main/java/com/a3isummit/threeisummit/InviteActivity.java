@@ -43,7 +43,7 @@ public class InviteActivity extends BaseActivity implements SyncContactsTask.Ifa
     {
         // Init holder
         ui = new ActivityViewHolders.Invite();
-        //ui.vwContent = getLayoutInflater().inflate(R.layout.activity_invite, null);
+        ui.vwContent = getLayoutInflater().inflate(R.layout.activity_invite, null);
 
         // Find all views form layout
         ui.rlSyncProgress           = (RelativeLayout)     ui.vwContent.findViewById(R.id.rl_contact_sync);

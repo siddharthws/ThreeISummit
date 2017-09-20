@@ -113,8 +113,8 @@ public class TestimonialFetchServerTask extends BaseServerTask {
             else
             {
                 // Show error toast
-                Dbg.Toast(parentContext, "This Section would be updated after the Event....", Toast.LENGTH_SHORT);
-                Dbg.Toast(parentContext, "Stay Tuned for it....", Toast.LENGTH_SHORT);
+                Toast.makeText(parentContext, "This Section would be updated after the Event....", Toast.LENGTH_SHORT).show();
+                Toast.makeText(parentContext, "Stay Tuned for it....", Toast.LENGTH_SHORT).show();
 
                 // Call Failure Listener
                 listener.onServerFailure();

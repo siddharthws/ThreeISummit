@@ -359,7 +359,13 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
             case RlDrawer.DRAWER_ACTION_INVITE:
             {
-                InviteActivity.Start(this);
+                AppPreferences.Init(this);
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Hello, You are Requested to try to 6th INDIRA BRANDSLAM 2017 by "+AppPreferences.GetName()+".Click here to download the App: https://play.google.com/store/apps/details?id=com.a3isummit.threeisummit");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
                 break;
             }
             case RlDrawer.DRAWER_ACTION_ABOUT:
