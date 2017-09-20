@@ -1,35 +1,25 @@
 {
   "project_info": {
-    "project_number": "266269856088",
-    "firebase_url": "https://threeisummit.firebaseio.com",
-    "project_id": "threeisummit",
-    "storage_bucket": "threeisummit.appspot.com"
+    "project_number": "41121525828",
+    "project_id": "firebase-brandslam"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:266269856088:android:893e1bb2949b31e0",
+        "mobilesdk_app_id": "1:41121525828:android:02e9cecbdc17774e",
         "android_client_info": {
-          "package_name": "com.a3isummit.threeisummit"
+          "package_name": "com.brandslam.threeisummit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "266269856088-kivuahcpiuicr55j6n384pi5jqssun36.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.a3isummit.threeisummit",
-            "certificate_hash": "d5c1d38786f5046beae62383ad3fc2fdfe3268b2"
-          }
-        },
-        {
-          "client_id": "266269856088-dbp1o5fb1sev3odmi4nsl3ntmhapvv4h.apps.googleusercontent.com",
+          "client_id": "41121525828-pe88g8mmjao8c5c4v9td7vhdr9lupah4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBQIrCUjdjKd6kiStsJ5hhIw9UHF0YRPrU"
+          "current_key": "AIzaSyCwiL-mhyj-iwtH2NnFxnYp7m1hCpxmsF4"
         }
       ],
       "services": {
@@ -37,16 +27,11 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "266269856088-dbp1o5fb1sev3odmi4nsl3ntmhapvv4h.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
-          "status": 2
+          "status": 1
         }
       }
     }

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomescreenActivity"
+    tools:context="com.brandslam.threeisummit.HomescreenActivity"
     android:background="@color/WHITE">
 
     <RelativeLayout
@@ -76,7 +76,7 @@
 
     </LinearLayout>
 
-    <com.a3isummit.views.TouchWrapper
+    <com.brandslam.views.TouchWrapper
         android:id="@+id/touch_wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -88,18 +88,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.a3isummit.views.RlCountdown
+            <com.brandslam.views.RlCountdown
                 android:id="@+id/rl_countdown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <com.a3isummit.views.RlAbout
+            <com.brandslam.views.RlAbout
                 android:id="@+id/rl_about"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="gone"/>
 
-            <com.a3isummit.views.RlEvent
+            <com.brandslam.views.RlEvent
                 android:id="@+id/rl_event"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,9 +108,9 @@
 
         </RelativeLayout>
 
-    </com.a3isummit.views.TouchWrapper>
+    </com.brandslam.views.TouchWrapper>
 
-    <com.a3isummit.views.RlDrawer
+    <com.brandslam.views.RlDrawer
             android:id="@+id/rl_drawer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
