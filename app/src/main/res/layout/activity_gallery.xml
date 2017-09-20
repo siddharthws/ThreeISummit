@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backdrop"
+    android:background="@drawable/cool_blue"
     >
 
     <RelativeLayout
@@ -13,7 +13,7 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@color/Indigo">
+        android:background="@color/BLACK">
 
         <RelativeLayout
             android:id="@+id/rl_toolbar_drawer"
@@ -141,7 +141,7 @@
                     android:src="@drawable/brand8" />
                 <ImageView
                     android:id="@+id/imageView9"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="450dp"
                     android:scaleType="centerCrop"
                     android:layout_marginBottom="15dp"
@@ -150,7 +150,7 @@
                     android:src="@drawable/brand9" />
                 <ImageView
                     android:id="@+id/imageView10"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="450dp"
                     android:scaleType="centerCrop"
                     android:layout_marginBottom="15dp"

@@ -4,12 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.a3isummit.adapters.GuestAdapter;
 import com.a3isummit.adapters.ListItemObject;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.objects.GuestObject;
 import com.a3isummit.objects.TestimonialObject;
+import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.server.GuestServerTask;
 import com.a3isummit.server.ServerInterfaces;
 import com.a3isummit.statics.AppPreferences;
@@ -34,18 +36,24 @@ public class GuestActivity extends BaseActivity implements ServerInterfaces.Ifac
     }
 
     @Override
-    public void Init()
-    {
-        int catType=-1;
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            catType = extras.getInt("itemtype");
-        }
+    public void Init() {
 
-        AppPreferences.Init(this);
-        GuestServerTask guestServerTask = new GuestServerTask(this, AppPreferences.getApp_id(), catType);
-        guestServerTask.SetBasicInterface(this);
-        guestServerTask.execute();
+        if (ConnectCheckTask.isNetworkAvailable(this)) {
+
+            int catType = -1;
+            Bundle extras = getIntent().getExtras();
+            if (extras != null) {
+                catType = extras.getInt("itemtype");
+            }
+
+            AppPreferences.Init(this);
+            GuestServerTask guestServerTask = new GuestServerTask(this, AppPreferences.getApp_id(), catType);
+            guestServerTask.SetBasicInterface(this);
+            guestServerTask.execute();
+        } else {
+
+            Toast.makeText(getApplicationContext(), "Please Connect to Internet", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public static void Start(BaseActivity activity)

@@ -75,19 +75,21 @@ public class TestimonialFetchServerTask extends BaseServerTask {
         {
             bSuccess = true;
         }
-        JSONArray ja = new JSONArray();
+
         try {
-            if(responseJson!=null)
+            Log.i("responseJsonexcep: ",requestJson.toString());
+            if(responseJson!=null || responseJson.getString("invalid")!="")
             {
+                JSONArray ja = new JSONArray();
                 ja=responseJson.getJSONArray(MacServer.KEY_TESTIMONIAL_FETCH_ARRAY);
                 for(int i=0; i<ja.length(); i++)
                 {
                     JSONObject recordJson=ja.getJSONObject(i);
                     Log.i("array datas: ", recordJson.toString());
                     TestimonialObject ts = new TestimonialObject(recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_NAME), recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_SUGGESTION), recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_DATE));
-                    testimonialObjects.add(ts);
-                }
-            }
+            testimonialObjects.add(ts);
+        }
+    }
 
         } catch (JSONException e) {
             e.printStackTrace();

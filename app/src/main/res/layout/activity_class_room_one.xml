@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.a3isummit.threeisummit.ClassRoomOneActivity"
-    android:background="@color/backdrop">
+    android:background="@color/WHITE">
 
 
 
@@ -17,7 +17,7 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@color/Indigo">
+        android:background="@color/BLACK">
 
         <RelativeLayout
             android:id="@+id/rl_toolbar_drawer"

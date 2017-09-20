@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-android:background="@color/backdrop">
+android:background="@drawable/cool_blue">
 
 
     <ScrollView
@@ -18,13 +18,15 @@ android:background="@color/backdrop">
         >
             <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                android:gravity="center"
                     android:padding="20dp"
                     android:text="About Us"
                     android:textStyle="bold"
-                    android:textColor="@color/Indigo"
+                    android:textColor="@color/WHITE"
+                android:background="@color/BLACK"
 
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <ImageView
@@ -43,19 +45,22 @@ android:background="@color/backdrop">
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/aboutus"
-                    android:textColor="@color/dark_brown"
+                    android:textColor="@color/WHITE"
+
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                     android:id="@+id/textVisionTitle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:background="@color/BLACK"
                     android:padding="20dp"
+                    android:gravity="center"
                     android:text="Vision"
                     android:textStyle="bold"
-                    android:textColor="@color/Indigo"
+                    android:textColor="@color/WHITE"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <ImageView
                     android:id="@+id/imageViewVision"
@@ -72,18 +77,20 @@ android:background="@color/backdrop">
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/vision"
-                    android:textColor="@color/dark_brown"
+                    android:textColor="@color/WHITE"
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <TextView
                     android:id="@+id/textMissionTitle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:padding="20dp"
                     android:text="Mission"
+                    android:gravity="center"
+                    android:background="@color/BLACK"
                     android:textStyle="bold"
-                    android:textColor="@color/Indigo"
+                    android:textColor="@color/WHITE"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <ImageView
@@ -101,7 +108,7 @@ android:background="@color/backdrop">
                     android:layout_gravity="center"
 
                     android:text="@string/mission"
-                    android:textColor="@color/dark_brown"
+                    android:textColor="@color/WHITE"
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <TextView
@@ -112,7 +119,7 @@ android:background="@color/backdrop">
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/fourth_brandslam_content"
-                    android:textColor="@color/dark_brown"
+                    android:textColor="@color/WHITE"
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             <ImageView
@@ -130,7 +137,7 @@ android:background="@color/backdrop">
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/fourth_brandslam_tarita"
-                    android:textColor="@color/dark_brown"
+                    android:textColor="@color/WHITE"
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -150,7 +157,7 @@ android:background="@color/backdrop">
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/fourth_brandslam_chetan"
-                    android:textColor="@color/dark_brown"
+                    android:textColor="@color/WHITE"
                     android:fontFamily="sans-serif-condensed"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 

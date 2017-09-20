@@ -16,6 +16,7 @@ import com.a3isummit.animations.AnimHelper;
 import com.a3isummit.animations.AnimObject;
 import com.a3isummit.animations.PowerInterpolator;
 import com.a3isummit.macros.MacRequestCodes;
+import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.statics.AppPreferences;
 import com.a3isummit.statics.AppStatics;
 import com.a3isummit.views.RlAbout;
@@ -293,7 +294,14 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         {
             case RlDrawer.DRAWER_ACTION_TESTIMONIAL:
             {
-                TestimonialActivity.Start(this);
+                if(ConnectCheckTask.isNetworkAvailable(this)){
+                    TestimonialActivity.Start(this);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Please Connect to Internet",Toast.LENGTH_SHORT).show();
+                }
+
                 break;
             }
 
@@ -324,7 +332,13 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
             case RlDrawer.DRAWER_ACTION_GUEST:
             {
-                GuestCategoryActivity.Start(this);
+                if(ConnectCheckTask.isNetworkAvailable(this)){
+                    GuestCategoryActivity.Start(this);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Please Connect to Internet",Toast.LENGTH_SHORT).show();
+                }
                 break;
             }
 
@@ -359,7 +373,13 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
 
             case RlDrawer.DRAWER_ACTION_INVITE:
             {
-                InviteActivity.Start(this);
+                AppPreferences.Init(this);
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Hello, "+AppPreferences.GetName()+" Invited you to try the IBS 2k17 App.Click here to download the App: https://play.google.com/store/apps/details?id=com.a3isummit.threeisummit");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
                 break;
             }
             case RlDrawer.DRAWER_ACTION_ABOUT:

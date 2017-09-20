@@ -22,19 +22,19 @@
             android:layout_width="210dp"
             android:layout_height="40dp"
             android:gravity="center"
-            android:background="@color/backdrop"
+            android:background="@color/WHITE"
             android:textSize="30dp"
-            android:textColor="@color/dark_brown"
+            android:textColor="@color/BLACK"
             android:text="WELCOME"/>
         <TextView
             android:id="@+id/textviewuser"
             android:layout_width="210dp"
             android:layout_marginTop="40dp"
-            android:background="@color/backdrop"
+            android:background="@color/WHITE"
             android:gravity="center"
             android:layout_height="40dp"
             android:textSize="20dp"
-            android:textColor="@color/dark_brown"
+            android:textColor="@color/BLACK"
             />
 
         <ListView
@@ -49,7 +49,7 @@
 
             android:divider="@android:color/transparent"
             android:dividerHeight="5dp"
-            android:background="@color/Indigo"/>
+            android:background="@color/royal_bue"/>
 
     </RelativeLayout>
 

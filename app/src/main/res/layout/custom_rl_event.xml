@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/backdrop">
+    android:background="@drawable/cool_blue">
 
 
 
@@ -21,16 +21,15 @@
             <TextView
                 android:id="@+id/tv1"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:text="EVENT SCHEDULE"
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
-                android:textColor="@color/dark_brown"
+                android:textColor="@color/WHITE"
+                android:background="@color/BLACK"
                 android:layout_below="@+id/rl_toolbar_feedback" android:layout_centerHorizontal="true"
-                android:layout_marginTop="23dp"/>
+              />
             <Button
                 android:id="@+id/button_dhruv"
                 android:textColor="#fff"
@@ -41,6 +40,7 @@
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:text="Dhruv Auditorium"
+                android:textSize="18dp"
 
                 android:onClick="ButtonClickDhruv"/>
             <Button
@@ -52,6 +52,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
+                android:textSize="18dp"
                 android:text="classroom 1"
 
                 android:onClick="ButtonClickClass1"/>
@@ -64,6 +65,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
+                android:textSize="18dp"
                 android:text="classroom 2"
 
                 android:onClick="ButtonClickClass2"/>

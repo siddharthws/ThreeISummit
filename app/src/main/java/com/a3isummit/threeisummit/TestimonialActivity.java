@@ -8,11 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.a3isummit.adapters.ListItemObject;
 import com.a3isummit.adapters.TestimonialAdapter;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.objects.TestimonialObject;
+import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.server.ServerInterfaces;
 import com.a3isummit.server.TestimonialAddServerTask;
 import com.a3isummit.server.TestimonialFetchServerTask;
@@ -40,12 +42,16 @@ public class TestimonialActivity extends BaseActivity implements ServerInterface
     @Override
     public void Init()
     {
-
-        AppPreferences.Init(this);
-        TestimonialFetchServerTask testimonialFetchServerTask = new TestimonialFetchServerTask(this, AppPreferences.getApp_id());
-        testimonialFetchServerTask.SetBasicInterface(this);
-        testimonialFetchServerTask.execute();
-
+        if(ConnectCheckTask.isNetworkAvailable(this)){
+            AppPreferences.Init(this);
+            TestimonialFetchServerTask testimonialFetchServerTask = new TestimonialFetchServerTask(this, AppPreferences.getApp_id());
+            testimonialFetchServerTask.SetBasicInterface(this);
+            testimonialFetchServerTask.execute();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Please Connect to Internet",Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

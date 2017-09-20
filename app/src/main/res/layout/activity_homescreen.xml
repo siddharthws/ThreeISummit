@@ -15,7 +15,7 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@color/Indigo">
+        android:background="@color/BLACK">
 
             <ImageButton
                 android:id="@+id/ib_toolbar_drawer"
@@ -42,7 +42,7 @@
 
         android:gravity="center_vertical"
         android:layout_alignParentBottom="true"
-        android:background="@color/Indigo">
+        android:background="@color/BLACK">
 
         <ImageButton
             android:id="@+id/ibCountdown"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.a3isummit.threeisummit.FeedbackActivity"
-    android:background="@color/backdrop">
+    android:background="@drawable/cool_blue">
 
 
     <RelativeLayout
@@ -15,7 +15,7 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@color/Indigo">
+        android:background="@color/BLACK">
 
         <RelativeLayout
             android:id="@+id/rl_toolbar_drawer"
@@ -62,7 +62,8 @@
         android:textAlignment="center"
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
-        android:textColor="@color/dark_brown"
+        android:textSize="15dp"
+        android:textColor="@color/WHITE"
         android:layout_below="@+id/rl_toolbar_feedback" android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"/>
 
@@ -72,9 +73,9 @@
             android:layout_width="160pt"
             android:layout_height="50dp"
             android:hint="Name(Optional)"
-            android:textColor="@color/WHITE"
+            android:textColor="@color/BLACK"
             android:gravity="center"
-            android:textColorHint="@color/WHITE"
+            android:textColorHint="@color/BLACK"
             android:background="@drawable/edit_text_feedback"
             android:layout_below="@+id/tv1"
             android:layout_centerHorizontal="true"
@@ -85,8 +86,8 @@
             android:layout_height="200dp"
             android:hint="Enter your Suggestion.."
             android:gravity="center"
-            android:textColor="@color/WHITE"
-            android:textColorHint="@color/WHITE"
+            android:textColor="@color/BLACK"
+            android:textColorHint="@color/BLACK"
             android:background="@drawable/edit_text_feedback"
             android:layout_marginTop="15dp" android:layout_below="@+id/edtxt1" android:layout_centerHorizontal="true"/>
 

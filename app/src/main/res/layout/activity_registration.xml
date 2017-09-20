@@ -5,7 +5,7 @@
     tools:context=".RegistrationActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backdrop"
+    android:background="@drawable/cool_blue"
 android:paddingBottom="@dimen/activity_vertical_margin"
 android:paddingTop="@dimen/activity_vertical_margin"
 android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -36,9 +36,9 @@ android:paddingRight="@dimen/activity_horizontal_margin">
 
 <EditText
 android:id="@+id/edit_text_username"
-        android:textColor="#fff"
+        android:textColor="@color/BLACK"
         android:gravity="center"
-        android:textColorHint="#fff"
+        android:textColorHint="@color/BLACK"
 android:background="@drawable/edittextstyle"
         android:layout_width="300dp"
         android:layout_height="60dp"
@@ -47,9 +47,9 @@ android:background="@drawable/edittextstyle"
 />
         <EditText
                 android:id="@+id/edit_text_mobile"
-                android:textColor="#fff"
+                android:textColor="@color/BLACK"
                 android:gravity="center"
-                android:textColorHint="#fff"
+                android:textColorHint="@color/BLACK"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edittextstyle"
 
@@ -60,9 +60,9 @@ android:background="@drawable/edittextstyle"
 />
         <EditText
                 android:id="@+id/edit_text_email"
-                android:textColor="#fff"
+                android:textColor="@color/BLACK"
                 android:gravity="center"
-                android:textColorHint="#fff"
+                android:textColorHint="@color/BLACK"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edittextstyle"
 
@@ -79,7 +79,7 @@ android:background="@drawable/edittextstyle"
                 android:gravity="center"
                 android:background="@drawable/buttonstyleselector"
                android:layout_marginTop="50dp"
-                android:layout_width="300dp"
+                android:layout_width="200dp"
                 android:layout_height="60dp"
                 android:text="Register"
 

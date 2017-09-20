@@ -31,6 +31,9 @@
     <color name="dark_brown">#3E2723</color>
     <color name="mahroon">#6C3227</color>
     <color name="dark_green">#1B5E20</color>
+    <color name="royal_bue">#4169e1</color>
+    <color name="light_black">#424242</color>
+    <color name="light_blue">#64B5F6</color>
 
     <!-- Translucent Colors -->
     <color name="BLACK_ALPHA">#77000000</color>

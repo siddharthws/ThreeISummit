@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.a3isummit.threeisummit.TestimonialActivity"
-    android:background="@color/mahroon">
+    android:background="@drawable/cool_blue">
 
 
     <RelativeLayout
@@ -15,7 +15,7 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@color/Indigo">
+        android:background="@color/BLACK">
 
         <ImageButton
             android:id="@+id/ib_toolbar_back"
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_below="@+id/rl_toolbar_testimonial"
         android:dividerHeight="3dp"
-        android:divider="@color/mahroon"/>
+        android:divider="@color/BLACK"/>
 
 
 

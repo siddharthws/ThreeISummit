@@ -8,7 +8,7 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                android:background="@color/backdrop">
+                android:background="@drawable/cool_blue">
 
 
     <ScrollView
@@ -30,6 +30,18 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="93dp"
                 >
+                <TextView
+                    android:id="@+id/tveventStart"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/summit"
+                    android:textColor="#fff"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/LinearLayout"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"/>
 
                 <LinearLayout
                     android:id="@+id/LinearLayout"
@@ -37,20 +49,9 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:background="@color/backdrop"
                     >
 
-                    <TextView
-                        android:id="@+id/tveventStart"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="50sp"
-                        android:gravity="center"
-                        android:text="@string/summit"
-                        android:textColor="#fff"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
+
                     <LinearLayout
                         android:id="@+id/LinearLayout1"
                         android:layout_width="350dp"
@@ -66,12 +67,13 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="10"
+                            android:background="@drawable/stopwatch"
                             android:gravity="center"
+                            android:paddingTop="20dp"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@color/WHITE"
+                            android:textColor="@color/BLACK"
                             android:textSize="35sp"
-                            android:textStyle="bold"
-                            android:background="@drawable/styletimer"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/txt_Day"
@@ -81,8 +83,7 @@
                             android:gravity="center_horizontal"
                             android:text="@string/days"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:textColor="@color/dark_brown"
-                            android:background="@color/backdrop"
+                            android:textColor="@color/WHITE"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -104,10 +105,11 @@
                             android:layout_weight="10"
                             android:gravity="center"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@color/WHITE"
+                            android:textColor="@color/BLACK"
                             android:textSize="35sp"
+                            android:paddingTop="20dp"
                             android:textStyle="bold"
-                            android:background="@drawable/styletimer"/>
+                            android:background="@drawable/stopwatch"/>
 
                         <TextView
                             android:id="@+id/txt_Hour"
@@ -117,9 +119,9 @@
                             android:gravity="center_horizontal"
                             android:text="@string/hours"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:textColor="@color/dark_brown"
+                            android:textColor="@color/WHITE"
                             android:textStyle="bold"
-                            android:background="@color/backdrop"/>
+                            />
                     </LinearLayout>
 
                     <LinearLayout
@@ -141,10 +143,11 @@
                             android:layout_weight="10"
                             android:gravity="center"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@color/WHITE"
+                            android:textColor="@color/BLACK"
+                            android:paddingTop="20dp"
                             android:textSize="35sp"
                             android:textStyle="bold"
-                            android:background="@drawable/styletimer"/>
+                            android:background="@drawable/stopwatch"/>
 
                         <TextView
                             android:id="@+id/txt_Minute"
@@ -154,9 +157,9 @@
                             android:gravity="center_horizontal"
                             android:text="@string/minutes"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:textColor="@color/dark_brown"
+                            android:textColor="@color/WHITE"
                             android:textStyle="bold"
-                            android:background="@color/backdrop"/>
+                            />
                     </LinearLayout>
 
                     <LinearLayout
@@ -175,12 +178,12 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="10"
-
+                            android:paddingTop="20dp"
                             android:gravity="center"
                             android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@color/WHITE"
+                            android:textColor="@color/BLACK"
                             android:textSize="35sp"
-                            android:background="@drawable/styletimer"
+                            android:background="@drawable/stopwatch"
                             android:textStyle="bold" />
 
                         <TextView
@@ -191,8 +194,7 @@
                             android:gravity="center_horizontal"
                             android:text="@string/seconds"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:textColor="@color/dark_brown"
-                            android:background="@color/backdrop"
+                            android:textColor="@color/WHITE"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
@@ -204,7 +206,7 @@
                 android:id="@+id/textViewheader3"
                 android:textSize="25sp"
                 android:textStyle="bold|italic"
-                android:textColor="@color/dark_brown"
+                android:textColor="@color/WHITE"
                 android:gravity="center"
                 android:foregroundGravity="center"
                 android:layout_marginTop="23dp"
@@ -217,7 +219,7 @@
                 android:id="@+id/textViewheader2"
                 android:textSize="25sp"
                 android:textStyle="bold|italic"
-                android:textColor="#3E2723"
+                android:textColor="@color/WHITE"
                 android:layout_below="@+id/relativeLayout"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="82dp"/>

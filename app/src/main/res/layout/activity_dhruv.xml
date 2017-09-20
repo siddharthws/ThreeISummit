@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.a3isummit.threeisummit.DhruvActivity"
-    android:background="@color/backdrop">
+    android:background="@color/WHITE">
     <RelativeLayout
 
         android:id="@+id/rl_toolbar_dhruv"
@@ -14,7 +14,7 @@
         android:paddingLeft="@dimen/toolbar_padding"
         android:paddingRight="@dimen/toolbar_padding"
         android:layout_alignParentTop="true"
-        android:background="@color/Indigo">
+        android:background="@color/BLACK">
 
         <RelativeLayout
             android:id="@+id/rl_toolbar_drawer"
@@ -89,15 +89,16 @@
             android:layout_gravity="center"
             android:padding="10dp"
 
-            android:text="R Sudarshan, Senior Director, Marketing; Channels &amp; Alliances, Asia, Pacific &amp; Japan, Dell EMC Dr Alok Bharadwaj, (Fmr SVP &amp; Head Canon Asia Strategy centre Singapore), Managing Director-India &amp; Emerging Markets, CreoVate Transformations &amp; Consulting Private Ltd
-        Bijoe George, Head-Brand Strategy, Advertising &amp; Digital Marketing-Cisco India &amp; SAARC, ‎Cisco
-        Anand Pejawar, President – Operations, IT &amp; International Business, SBI Life Insurance Co Ltd
-        Ned Mody, Managing Director, Berkadia Commercial Mortgage LLC
-        Dr Arun Arora, Executive Chairman, Edvance Group
-        Harish S. Mehta, Chairman &amp; Managing Director, Onward Technologies Limited.
-        Dr R L Bhatia, World World CSR Day &amp; World Sustainability
-        Dr Tarita Shankar, Chairperson, Indira Group of Institutes
-        Prof. Chetan Wakalkar, Group Director, Indira Group of Institutes"
+            android:text="1.  R Sudarshan, Senior Director, Marketing; Channels &amp; Alliances, Asia, Pacific &amp; Japan, Dell EMC
+2.  Dr. Alok Bharadwaj, (Fmr SVP &amp; Head Canon Asia Strategy centre Singapore), Managing Director-India &amp; Emerging Markets, CreoVate Transformations &amp; Consulting Private Ltd
+3.  Mr. Bijoe George, Head-Brand Strategy, Advertising &amp; Digital Marketing-Cisco India &amp; SAARC, ‎Cisco
+4.  Mr. Anand Pejawar, President – Operations, IT &amp; International Business, SBI Life Insurance Co Ltd
+5.  Mr. Ned Mody, Managing Director, Berkadia Commercial Mortgage LLC
+6.  Dr. Arun Arora, Executive Chairman, Edvance Group
+7.  Mr. Harish S. Mehta, Chairman &amp; Managing Director, Onward Technologies Limited.
+8.  Dr. R L Bhatia, World World CSR Day &amp; World Sustainability
+9.  Dr. Tarita Shankar, Chairperson, Indira Group of Institutes
+10. Prof. Chetan Wakalkar, Group Director, Indira Group of Institutes"
             android:textColor="@color/dark_brown"/>
         <TextView
             android:id="@+id/textView23"
