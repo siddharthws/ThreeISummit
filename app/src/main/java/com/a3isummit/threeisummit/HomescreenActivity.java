@@ -63,6 +63,7 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
     @Override
     public void Init()
     {
+
         // Initialize Animation Helper
         animHelper = new AnimHelper(this);
 
@@ -312,9 +313,9 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
             case RlDrawer.DRAWER_ACTION_RATE_US:
             {
                 try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.whatsapp")));
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.a3isummit.threeisummit")));
                 } catch (android.content.ActivityNotFoundException anfe) {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.whatsapp")));
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=com.a3isummit.threeisummit")));
                 }
 
             }

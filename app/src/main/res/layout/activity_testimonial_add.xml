@@ -91,6 +91,17 @@
             android:layout_below="@+id/tv1"
             android:layout_centerHorizontal="true"/>
 
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:layout_below="@+id/bt1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp" />
+
 
 
 </RelativeLayout>

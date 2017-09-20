@@ -75,9 +75,9 @@ public class GuestCategoryActivity extends BaseActivity implements ServerInterfa
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-            Intent myIntent = new Intent(getApplicationContext(), GuestActivity.class);
+            Intent myIntent = new Intent(GuestCategoryActivity.this, GuestActivity.class);
             myIntent.putExtra("itemtype", i);
-            getApplicationContext().startActivity(myIntent);
+            GuestCategoryActivity.this.startActivity(myIntent);
         }
     };
 

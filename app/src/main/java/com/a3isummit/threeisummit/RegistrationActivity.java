@@ -21,6 +21,7 @@ import com.a3isummit.animations.AnimationFactory;
 import com.a3isummit.animations.PowerInterpolator;
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacRequestCodes;
+import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.server.RegisterServerTask;
 
 import com.a3isummit.server.ServerInterfaces;
@@ -108,40 +109,51 @@ public class RegistrationActivity extends         BaseActivity implements Server
     // Button Click APis
     public void ButtonClickRegister(View view)
     {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+\\.*[a-z]*";
+        if(ConnectCheckTask.isNetworkAvailable(this))
+        {
 
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+            if(ui.tv_username.getText().toString().length()==0&&ui.tv_mobile.getText().toString().length()==0&&ui.tv_email.getText().toString().length()==0)
+            {
+                Toast.makeText(getApplicationContext(),"Fields cannot be Blank",Toast.LENGTH_SHORT).show();
+            }
+            else if(ui.tv_username.getText().toString().length()==0)
+            {
+                Toast.makeText(getApplicationContext(),"Name cannot be Blank",Toast.LENGTH_SHORT).show();
+            }
+            else if(ui.tv_mobile.getText().toString().length()==0)
+            {
+                Toast.makeText(getApplicationContext(),"Mobile cannot be Blank",Toast.LENGTH_SHORT).show();
+            }
+            else if (!ui.tv_email.getText().toString().trim().matches(emailPattern)||ui.tv_email.getText().toString().length()==0)
+            {
+                Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
+            }
+            else if(!TextUtils.isDigitsOnly(ui.tv_mobile.getText())){
+                Toast.makeText(getApplicationContext(),"Use Digits Only",Toast.LENGTH_SHORT).show();
+            }
+            else if(ui.tv_mobile.getText().toString().length()!=10)
+            {
+                Toast.makeText(getApplicationContext(),"Invalid Number",Toast.LENGTH_SHORT).show();
+            }
 
-        if(ui.tv_username.getText().toString().length()==0&&ui.tv_mobile.getText().toString().length()==0&&ui.tv_email.getText().toString().length()==0)
-        {
-            Toast.makeText(getApplicationContext(),"Fields cannot be Blank",Toast.LENGTH_SHORT).show();
-        }
-       else if(ui.tv_username.getText().toString().length()==0)
-        {
-            Toast.makeText(getApplicationContext(),"Name cannot be Blank",Toast.LENGTH_SHORT).show();
-        }
-        else if(ui.tv_mobile.getText().toString().length()==0)
-        {
-            Toast.makeText(getApplicationContext(),"Mobile cannot be Blank",Toast.LENGTH_SHORT).show();
-        }
-        else if (!ui.tv_email.getText().toString().trim().matches(emailPattern)||ui.tv_email.getText().toString().length()==0)
-        {
-            Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
-        }
-        else if(!TextUtils.isDigitsOnly(ui.tv_mobile.getText())){
-            Toast.makeText(getApplicationContext(),"Use Digits Only",Toast.LENGTH_SHORT).show();
-        }
-        else if(ui.tv_mobile.getText().toString().length()!=10)
-        {
-            Toast.makeText(getApplicationContext(),"Invalid Number",Toast.LENGTH_SHORT).show();
+            else{
+                ui.progressBar.setVisibility(View.VISIBLE);
+
+
+                RegisterServerTask registerServerTask = new RegisterServerTask(this, ui.tv_mobile.getText().toString(), ui.tv_username.getText().toString(), ui.tv_email.getText().toString());
+                registerServerTask.execute();
+
+                registerServerTask.SetBasicInterface(this);
+            }
         }
         else{
-            ui.progressBar.setVisibility(View.VISIBLE);
-
-            RegisterServerTask registerServerTask = new RegisterServerTask(this, ui.tv_mobile.getText().toString(), ui.tv_username.getText().toString(), ui.tv_email.getText().toString());
-            registerServerTask.execute();
-
-            registerServerTask.SetBasicInterface(this);
+            Toast.makeText(getApplicationContext(),"Please Connect to Internet",Toast.LENGTH_SHORT).show();
         }
+
+
+
+
 
     }
     public final static boolean isValidEmail(CharSequence target) {

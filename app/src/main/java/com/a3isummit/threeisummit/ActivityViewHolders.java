@@ -76,6 +76,7 @@ public class ActivityViewHolders
         public TextView fbTextview = null;
         public EditText fbEdittext1 = null;
         public EditText fbEdittext2 = null;
+        public ProgressBar progressBar1=null;
         public Button submit = null;
     }
 
@@ -88,6 +89,7 @@ public class ActivityViewHolders
     {
         public TextView tmTextview = null;
         public Button submit = null;
+        public ProgressBar progressBar2 = null;
     }
 
 

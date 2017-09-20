@@ -77,14 +77,18 @@ public class TestimonialFetchServerTask extends BaseServerTask {
         }
         JSONArray ja = new JSONArray();
         try {
-            ja=responseJson.getJSONArray(MacServer.KEY_TESTIMONIAL_FETCH_ARRAY);
-            for(int i=0; i<ja.length(); i++)
+            if(responseJson!=null)
             {
-                JSONObject recordJson=ja.getJSONObject(i);
-                Log.i("array datas: ", recordJson.toString());
-                TestimonialObject ts = new TestimonialObject(recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_NAME), recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_SUGGESTION), recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_DATE));
-                testimonialObjects.add(ts);
+                ja=responseJson.getJSONArray(MacServer.KEY_TESTIMONIAL_FETCH_ARRAY);
+                for(int i=0; i<ja.length(); i++)
+                {
+                    JSONObject recordJson=ja.getJSONObject(i);
+                    Log.i("array datas: ", recordJson.toString());
+                    TestimonialObject ts = new TestimonialObject(recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_NAME), recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_SUGGESTION), recordJson.getString(MacServer.KEY_TESTIMONIAL_FETCH_DATE));
+                    testimonialObjects.add(ts);
+                }
             }
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -109,7 +113,8 @@ public class TestimonialFetchServerTask extends BaseServerTask {
             else
             {
                 // Show error toast
-                Dbg.Toast(parentContext, "Failed to Retrieve Your Testimonials...", Toast.LENGTH_SHORT);
+                Dbg.Toast(parentContext, "This Section would be updated after the Event....", Toast.LENGTH_SHORT);
+                Dbg.Toast(parentContext, "Stay Tuned for it....", Toast.LENGTH_SHORT);
 
                 // Call Failure Listener
                 listener.onServerFailure();

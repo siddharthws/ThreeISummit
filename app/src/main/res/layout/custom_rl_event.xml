@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:text="EVENT SCHEDULE"
                 android:textAlignment="center"
-                android:textSize="40dp"
+                android:textSize="30dp"
                 android:textStyle="bold"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"

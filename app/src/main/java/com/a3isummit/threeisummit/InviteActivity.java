@@ -43,7 +43,7 @@ public class InviteActivity extends BaseActivity implements SyncContactsTask.Ifa
     {
         // Init holder
         ui = new ActivityViewHolders.Invite();
-        ui.vwContent = getLayoutInflater().inflate(R.layout.activity_invite, null);
+        //ui.vwContent = getLayoutInflater().inflate(R.layout.activity_invite, null);
 
         // Find all views form layout
         ui.rlSyncProgress           = (RelativeLayout)     ui.vwContent.findViewById(R.id.rl_contact_sync);
@@ -85,7 +85,7 @@ public class InviteActivity extends BaseActivity implements SyncContactsTask.Ifa
 
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hello, You are invited to 6th INDIRA BRANDSLAM 2017 by "+AppPreferences.GetName()+".Click here to download the App: ");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "Hello, You are invited to 6th INDIRA BRANDSLAM 2017 by "+AppPreferences.GetName()+".Click here to download the App: https://play.google.com/store/apps/details?id=com.a3isummit.threeisummit");
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }

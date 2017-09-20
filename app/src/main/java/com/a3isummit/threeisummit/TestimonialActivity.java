@@ -88,5 +88,5 @@ public class TestimonialActivity extends BaseActivity implements ServerInterface
     @Override
     public void onServerFailure() {
 
-    }
+        finish(); }
 }

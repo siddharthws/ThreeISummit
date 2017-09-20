@@ -12,6 +12,7 @@ import android.widget.*;
 import com.a3isummit.animations.AnimHelper;
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacRequestCodes;
+import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.server.FeedbackServerTask;
 import com.a3isummit.server.ServerInterfaces;
 import com.a3isummit.server.TestimonialAddServerTask;
@@ -42,7 +43,8 @@ public class TestimonialAddActivity extends BaseActivity implements ServerInterf
     @Override
     public void Init()
     {
-
+        ui.progressBar2=(ProgressBar)findViewById(R.id.progressBar2);
+        ui.progressBar2.setVisibility(View.INVISIBLE);
     }
 
     public static void Start(BaseActivity activity)
@@ -60,18 +62,32 @@ public class TestimonialAddActivity extends BaseActivity implements ServerInterf
     {
         //testimonial
         String suggestion=ui.tmTextview.getText().toString();
+        if(ConnectCheckTask.isNetworkAvailable(this)){
+            if(suggestion.length()!=0&&suggestion!="")
+            {
+                ui.progressBar2.setVisibility(View.VISIBLE);
+                AppPreferences.Init(this);
+                TestimonialAddServerTask testimonialAddServerTask = new TestimonialAddServerTask(this, AppPreferences.getApp_id(), AppPreferences.GetName(),suggestion);
+                testimonialAddServerTask.SetBasicInterface(this);
+                testimonialAddServerTask.execute();
+            }
+            else {
+                Toast.makeText(getApplicationContext(),"Please Enter Data",Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(getApplicationContext(),"Please Connect to Internet",Toast.LENGTH_SHORT).show();
+        }
 
 
 
-        AppPreferences.Init(this);
-        TestimonialAddServerTask testimonialAddServerTask = new TestimonialAddServerTask(this, AppPreferences.getApp_id(), AppPreferences.GetName(),suggestion);
-        testimonialAddServerTask.SetBasicInterface(this);
-        testimonialAddServerTask.execute();
+
+
 
     }
 
     @Override
     public void onServerSuccess() {
+        ui.progressBar2.setVisibility(View.GONE);
         Dbg.Toast(this, "Have a Nice Day...", Toast.LENGTH_SHORT);
         finish();
 
@@ -79,7 +95,7 @@ public class TestimonialAddActivity extends BaseActivity implements ServerInterf
 
     @Override
     public void onServerFailure() {
-
+        ui.progressBar2.setVisibility(View.INVISIBLE);
         Dbg.Toast(getApplicationContext(), "Failed to Register your Views...", Toast.LENGTH_SHORT);
 
     }
