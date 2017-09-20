@@ -1,23 +1,17 @@
 package com.a3isummit.threeisummit;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.a3isummit.adapters.GuestAdapter;
 import com.a3isummit.adapters.GuestCategoryAdapter;
 import com.a3isummit.adapters.ListItemObject;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.objects.GuestObject;
-import com.a3isummit.objects.TestimonialObject;
 import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.server.GuestServerCategoryTask;
-import com.a3isummit.server.GuestServerTask;
 import com.a3isummit.server.ServerInterfaces;
 import com.a3isummit.statics.AppPreferences;
 

@@ -6,7 +6,7 @@ import android.widget.Toast;
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacServer;
 import com.a3isummit.objects.GuestObject;
-import com.a3isummit.objects.TestimonialObject;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,23 +1,14 @@
 package com.a3isummit.threeisummit;
 
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-import android.support.v4.app.NotificationCompat;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.*;
 import com.a3isummit.animations.AnimHelper;
 import com.a3isummit.animations.AnimObject;
-import com.a3isummit.animations.AnimationFactory;
 import com.a3isummit.animations.PowerInterpolator;
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacRequestCodes;
@@ -25,7 +16,6 @@ import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.server.RegisterServerTask;
 
 import com.a3isummit.server.ServerInterfaces;
-import com.a3isummit.statics.AppPreferences;
 
 public class RegistrationActivity extends         BaseActivity implements ServerInterfaces.IfaceBasic {
     // ----------------------- Constants ----------------------- //

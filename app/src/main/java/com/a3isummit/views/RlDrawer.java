@@ -2,7 +2,6 @@ package com.a3isummit.views;
 
 import android.animation.Animator;
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;

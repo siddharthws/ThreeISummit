@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.a3isummit.threeisummit">
 
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -18,7 +18,7 @@
 
         <!-- Activity Declarations -->
         <activity
-            android:name=".AppLoadingActivity"
+            android:name="com.a3isummit.threeisummit.AppLoadingActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -28,37 +28,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegistrationActivity"
+            android:name="com.a3isummit.threeisummit.RegistrationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".HomescreenActivity"
+            android:name="com.a3isummit.threeisummit.HomescreenActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name=".InviteActivity" />
+        <activity android:name="com.a3isummit.threeisummit.InviteActivity" />
         <activity
-            android:name=".FeedbackActivity"
+            android:name="com.a3isummit.threeisummit.FeedbackActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name=".TestimonialActivity" />
-        <activity android:name=".GuestActivity" />
-        <activity android:name=".TestimonialAddActivity" />
+        <activity android:name="com.a3isummit.threeisummit.TestimonialActivity" />
+        <activity android:name="com.a3isummit.threeisummit.GuestActivity" />
+        <activity android:name="com.a3isummit.threeisummit.TestimonialAddActivity" />
         <activity
-            android:name=".GatePassActivity"
+            android:name="com.a3isummit.threeisummit.GatePassActivity"
             android:label="@string/title_activity_gate_pass"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <service android:name=".MyFirebaseInstanceIDService">
+        <service android:name="com.a3isummit.threeisummit.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
-        <activity android:name=".GuestCategoryActivity" />
-        <activity android:name=".GalleryActivity" />
-        <activity android:name=".DhruvActivity" />
-        <activity android:name=".ClassRoomOneActivity" />
-        <activity android:name=".ClassRoomTwoActivity"></activity>
+        <activity android:name="com.a3isummit.threeisummit.GuestCategoryActivity" />
+        <activity android:name="com.a3isummit.threeisummit.GalleryActivity" />
+        <activity android:name="com.a3isummit.threeisummit.DhruvActivity" />
+        <activity android:name="com.a3isummit.threeisummit.ClassRoomOneActivity" />
+        <activity android:name="com.a3isummit.threeisummit.ClassRoomTwoActivity"></activity>
     </application>
 
 </manifest>

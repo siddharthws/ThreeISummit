@@ -7,11 +7,8 @@ import android.widget.Toast;
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacServer;
 
-import com.a3isummit.statics.AppPreferences;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import javax.crypto.Mac;
 
 /**
  * Created by Siddharth on 02-09-2017.

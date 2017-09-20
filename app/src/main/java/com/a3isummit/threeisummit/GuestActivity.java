@@ -1,6 +1,5 @@
 package com.a3isummit.threeisummit;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -10,7 +9,6 @@ import com.a3isummit.adapters.GuestAdapter;
 import com.a3isummit.adapters.ListItemObject;
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.objects.GuestObject;
-import com.a3isummit.objects.TestimonialObject;
 import com.a3isummit.server.ConnectCheckTask;
 import com.a3isummit.server.GuestServerTask;
 import com.a3isummit.server.ServerInterfaces;

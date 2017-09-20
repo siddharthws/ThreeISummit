@@ -3,11 +3,8 @@ package com.a3isummit.threeisummit;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.a3isummit.macros.MacRequestCodes;
 import com.a3isummit.statics.AppPreferences;

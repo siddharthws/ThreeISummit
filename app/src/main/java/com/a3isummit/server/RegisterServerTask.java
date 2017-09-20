@@ -1,21 +1,15 @@
 package com.a3isummit.server;
 
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.a3isummit.debug.Dbg;
 import com.a3isummit.macros.MacServer;
 
 import com.a3isummit.statics.AppPreferences;
-import com.a3isummit.threeisummit.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import javax.crypto.Mac;
 
 /**
  * Created by Siddharth on 02-09-2017.
