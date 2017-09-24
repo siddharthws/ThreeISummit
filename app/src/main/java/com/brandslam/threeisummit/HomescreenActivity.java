@@ -226,6 +226,12 @@ public class HomescreenActivity extends     BaseActivity implements RlDrawer.Dra
         Intent myIntent = new Intent(this, ClassRoomTwoActivity.class);
         startActivity(myIntent);
     }
+    public void ButtonYoutubeClick(View v)
+    {
+        Intent sendIntent = new Intent(this,YoutubeActivity.class);
+        startActivity(sendIntent);
+
+    }
 
     public void ButtonClickEvent(View view)
     {

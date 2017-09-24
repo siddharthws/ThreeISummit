@@ -109,8 +109,6 @@ public class ActivityViewHolders
     {
 
     }
-    public static class Youtube extends Base
-    {
 
-    }
+
 }

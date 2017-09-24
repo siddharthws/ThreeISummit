@@ -2,6 +2,7 @@ package com.brandslam.threeisummit;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,41 +12,56 @@ import com.brandslam.macros.Config;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayer.Provider;
+
 import com.google.android.youtube.player.YouTubePlayerView;
 
 
 
-public class YoutubeActivity extends YouTubeBaseActivity {
-    private YouTubePlayer player;
-    private MyPlayerStateChangeListener playerStateChangeListener;
-    private MyPlaybackEventListener playbackEventListener;
+public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
     private static final int RECOVERY_REQUEST = 1;
     private YouTubePlayerView youTubeView;
-
-
-
+    private MyPlayerStateChangeListener playerStateChangeListener;
+    private MyPlaybackEventListener playbackEventListener;
+    private YouTubePlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_youtube);
+
+        youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
+        youTubeView.initialize(Config.YOUTUBE_API_KEY, this);
+
         playerStateChangeListener = new MyPlayerStateChangeListener();
         playbackEventListener = new MyPlaybackEventListener();
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        youTubeView = (YouTubePlayerView) findViewById(R.id.);
-        youTubeView.initialize(Config.YOUTUBE_API_KEY, null);
 
         final EditText seekToText = (EditText) findViewById(R.id.seek_to_text);
         Button seekToButton = (Button) findViewById(R.id.seek_to_button);
         seekToButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int skipToSecs = Integer.valueOf(seekToText.getText().toString());
-                player.seekToMillis(skipToSecs * 1000);
+                String check=seekToText.getText().toString();
+                if(check.equals("")||check==null)
+                {
+                    Log.e("OMG","working");
+                    Toast.makeText(YoutubeActivity.this, "Enter Seconds", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Log.e("OMG","not working");
+                    int skipToSecs = Integer.valueOf(seekToText.getText().toString());
+                    player.seekToMillis(skipToSecs * 1000);
+                }
+
             }
         });
+    }
+    // Button Click APIs
+    public void ButtonClickBack(View view)
+    {
+        finish();
     }
 
     @Override
@@ -53,8 +69,9 @@ public class YoutubeActivity extends YouTubeBaseActivity {
         this.player = player;
         player.setPlayerStateChangeListener(playerStateChangeListener);
         player.setPlaybackEventListener(playbackEventListener);
+
         if (!wasRestored) {
-            player.cueVideo("fhWaJi1Hsfo"); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
+            player.cueVideo("36f-mIlHeTs"); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
         }
     }
 
@@ -79,9 +96,11 @@ public class YoutubeActivity extends YouTubeBaseActivity {
     protected Provider getYouTubePlayerProvider() {
         return youTubeView;
     }
+
     private void showMessage(String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
+
     private final class MyPlaybackEventListener implements YouTubePlayer.PlaybackEventListener {
 
         @Override
@@ -99,7 +118,7 @@ public class YoutubeActivity extends YouTubeBaseActivity {
         @Override
         public void onStopped() {
             // Called when playback stops for a reason other than being paused.
-            showMessage("Stopped");
+            showMessage("Live Feed Stopped");
         }
 
         @Override
@@ -148,4 +167,5 @@ public class YoutubeActivity extends YouTubeBaseActivity {
             // Called when an error occurs.
         }
     }
+
 }

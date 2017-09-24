@@ -9,11 +9,13 @@ import android.support.v4.app.NotificationCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.brandslam.threeisummit.HomescreenActivity;
 import com.brandslam.threeisummit.R;
+import com.brandslam.threeisummit.YoutubeActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -53,6 +55,8 @@ public class RlCountdown extends RelativeLayout
 
 
 
+
+
         txtDay = (TextView) findViewById(R.id.txtDay);
         txtHour = (TextView) findViewById(R.id.txtHour);
         txtMinute = (TextView) findViewById(R.id.txtMinute);
@@ -69,7 +73,7 @@ public class RlCountdown extends RelativeLayout
                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-hh.mm.ss");
                     // Please here set your event date//YYYY-MM-DD
                     //Date futureDate = dateFormat.parse("2017-09-25-10.00.00");
-                    Date futureDate1 = dateFormat.parse("2017-09-25-10.00.00");
+                    Date futureDate1 = dateFormat.parse("2017-09-24-18.50.00");
                     Date currentDate = new Date();
                     if (!currentDate.after(futureDate1)) {
                         long diff = futureDate1.getTime()
@@ -157,8 +161,7 @@ public class RlCountdown extends RelativeLayout
                            default:     break;
                        }
                     } else {
-                        tvEventStart.setVisibility(View.VISIBLE);
-                        tvEventStart.setText("The Event started..Enjoy your Day");
+
                         textViewGone(context);
                     }
                 } catch (Exception e) {
@@ -177,11 +180,12 @@ public class RlCountdown extends RelativeLayout
         findViewById(R.id.LinearLayout2).setVisibility(View.GONE);
         findViewById(R.id.LinearLayout3).setVisibility(View.GONE);
         findViewById(R.id.LinearLayout4).setVisibility(View.GONE);
+        findViewById(R.id.buttonyoutube).setVisibility(View.VISIBLE);
 
         //Notify about Live Streaming
         String title = "Hurray...IBS 2k17 Started..";
         String text = "Click to watch live Streaming..";
-        notifyCall(context, title, text);
+        notifylive(context, title, text);
     }
 
     public void notifyCall(Context context,String title, String text)
@@ -204,4 +208,22 @@ public class RlCountdown extends RelativeLayout
         manager.notify(0, builder.build());
 
     }
+
+    public void notifylive(Context context,String title, String text)
+    {
+        Intent notificationIntent = new Intent(context, YoutubeActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(context, (int)System.currentTimeMillis(), notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
+                .setSmallIcon(R.drawable.reminder)
+                .setContentTitle(title)
+                .setContentText(text)
+                .setAutoCancel(true);
+        builder.setContentIntent(contentIntent).setAutoCancel(true);
+
+        NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
+
+    }
+
 }
