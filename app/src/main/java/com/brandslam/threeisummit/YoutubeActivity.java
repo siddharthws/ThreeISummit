@@ -35,7 +35,7 @@ public class YoutubeActivity extends YouTubeBaseActivity {
         setContentView(R.layout.activity_main);
 
         youTubeView = (YouTubePlayerView) findViewById(R.id.);
-        youTubeView.initialize(Config.YOUTUBE_API_KEY, this);
+        youTubeView.initialize(Config.YOUTUBE_API_KEY, null);
 
         final EditText seekToText = (EditText) findViewById(R.id.seek_to_text);
         Button seekToButton = (Button) findViewById(R.id.seek_to_button);

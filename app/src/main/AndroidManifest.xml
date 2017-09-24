@@ -47,11 +47,8 @@
             android:label="@string/title_activity_gate_pass"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <service android:name=".MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
+
+
 
         <activity android:name=".GuestCategoryActivity" />
         <activity android:name=".GalleryActivity" />
@@ -59,6 +56,12 @@
         <activity android:name=".ClassRoomOneActivity" />
         <activity android:name=".ClassRoomTwoActivity" />
         <activity android:name=".YoutubeActivity"></activity>
+        <activity android:name="com.brandslam.threeisummit.GuestCategoryActivity" />
+        <activity android:name="com.brandslam.threeisummit.GalleryActivity" />
+        <activity android:name="com.brandslam.threeisummit.DhruvActivity" />
+        <activity android:name="com.brandslam.threeisummit.ClassRoomOneActivity" />
+        <activity android:name="com.brandslam.threeisummit.ClassRoomTwoActivity"></activity>
+
     </application>
 
 </manifest>
