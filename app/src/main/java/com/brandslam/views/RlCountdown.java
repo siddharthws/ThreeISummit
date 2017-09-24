@@ -66,12 +66,13 @@ public class RlCountdown extends RelativeLayout
             public void run() {
                 handler.postDelayed(this, 1000);
                 try {
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-hh.mm.ss");
                     // Please here set your event date//YYYY-MM-DD
-                    Date futureDate = dateFormat.parse("2017-09-25");
+                    //Date futureDate = dateFormat.parse("2017-09-25-10.00.00");
+                    Date futureDate1 = dateFormat.parse("2017-09-25-10.00.00");
                     Date currentDate = new Date();
-                    if (!currentDate.after(futureDate)) {
-                        long diff = futureDate.getTime()
+                    if (!currentDate.after(futureDate1)) {
+                        long diff = futureDate1.getTime()
                                 - currentDate.getTime();
                         long days = diff / (24 * 60 * 60 * 1000);
                         diff -= days * (24 * 60 * 60 * 1000);
@@ -158,7 +159,7 @@ public class RlCountdown extends RelativeLayout
                     } else {
                         tvEventStart.setVisibility(View.VISIBLE);
                         tvEventStart.setText("The Event started..Enjoy your Day");
-                        textViewGone();
+                        textViewGone(context);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -168,12 +169,19 @@ public class RlCountdown extends RelativeLayout
         handler.postDelayed(runnable, 1 * 1000);
     }
 
-    public void textViewGone() {
+    public void textViewGone(Context context) {
+
+        TextView tv = (TextView) findViewById(R.id.textViewheader3);
+        tv.setText("AT");
         findViewById(R.id.LinearLayout1).setVisibility(View.GONE);
         findViewById(R.id.LinearLayout2).setVisibility(View.GONE);
         findViewById(R.id.LinearLayout3).setVisibility(View.GONE);
         findViewById(R.id.LinearLayout4).setVisibility(View.GONE);
-        findViewById(R.id.textViewheader2).setVisibility(View.GONE);
+
+        //Notify about Live Streaming
+        String title = "Hurray...IBS 2k17 Started..";
+        String text = "Click to watch live Streaming..";
+        notifyCall(context, title, text);
     }
 
     public void notifyCall(Context context,String title, String text)

@@ -48,12 +48,6 @@
             android:label="@string/title_activity_gate_pass"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <service android:name="com.brandslam.threeisummit.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-
         <activity android:name="com.brandslam.threeisummit.GuestCategoryActivity" />
         <activity android:name="com.brandslam.threeisummit.GalleryActivity" />
         <activity android:name="com.brandslam.threeisummit.DhruvActivity" />
