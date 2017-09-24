@@ -32,6 +32,9 @@
     <string name="title_activity_gate_pass">GatePassActivity</string>
 
     <string name="activity_qrcode_title">Gate Pass</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
 
 
 </resources>

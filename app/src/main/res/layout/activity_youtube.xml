@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brandslam.threeisummit.YoutubeActivity">
+
+    <RelativeLayout
+
+        android:id="@+id/rl_toolbar_dhruv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:paddingLeft="@dimen/toolbar_padding"
+        android:paddingRight="@dimen/toolbar_padding"
+        android:layout_alignParentTop="true"
+        android:background="@color/BLACK">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/ib_toolbar_back"
+                android:layout_width="@dimen/toolbar_button_height_width"
+                android:layout_height="@dimen/toolbar_button_height_width"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/toolbar_button_padding"
+                android:src="@mipmap/icon_back"
+                android:scaleType="fitXY"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="ButtonClickBack"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_toolbar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@id/rl_toolbar_drawer"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/textsize_primary"
+            android:textColor="@color/WHITE"
+            android:text="Youtube"/>
+
+    </RelativeLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".YoutubeActivity">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/seek_to_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/seek_to_hint"/>
+
+        <Button
+            android:id="@+id/seek_to_button"
+            android:text="@string/seek_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
