@@ -71,9 +71,9 @@ public class RlCountdown extends RelativeLayout
                 handler.postDelayed(this, 1000);
                 try {
                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-hh.mm.ss");
-                    // Please here set your event date//YYYY-MM-DD
+                    //Please here set your event date//YYYY-MM-DD
                     //Date futureDate = dateFormat.parse("2017-09-25-10.00.00");
-                    Date futureDate1 = dateFormat.parse("2017-09-24-18.50.00");
+                    Date futureDate1 = dateFormat.parse("2017-09-25-09.30.00");
                     Date currentDate = new Date();
                     if (!currentDate.after(futureDate1)) {
                         long diff = futureDate1.getTime()

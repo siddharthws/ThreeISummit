@@ -71,7 +71,7 @@ public class YoutubeActivity extends YouTubeBaseActivity implements YouTubePlaye
         player.setPlaybackEventListener(playbackEventListener);
 
         if (!wasRestored) {
-            player.cueVideo("36f-mIlHeTs"); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
+            player.cueVideo("jf57_LIjqrs"); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
         }
     }
 

@@ -56,11 +56,6 @@
         <activity android:name=".ClassRoomOneActivity" />
         <activity android:name=".ClassRoomTwoActivity" />
         <activity android:name=".YoutubeActivity"></activity>
-        <activity android:name="com.brandslam.threeisummit.GuestCategoryActivity" />
-        <activity android:name="com.brandslam.threeisummit.GalleryActivity" />
-        <activity android:name="com.brandslam.threeisummit.DhruvActivity" />
-        <activity android:name="com.brandslam.threeisummit.ClassRoomOneActivity" />
-        <activity android:name="com.brandslam.threeisummit.ClassRoomTwoActivity"/>
 
     </application>
 
